@@ -17,7 +17,7 @@ const Contact = () => {
                                     <div className="sm:rounded-md">
 
                                         <div className="col-span-6">
-                                            <label htmlFor="name" className="block text-md font-medium text-gray-700">
+                                            <label htmlFor="name" className="block text-md font-medium text-gray-700 dark:text-gray-200">
                                                 Name
                                             </label>
                                             <input
@@ -29,7 +29,7 @@ const Contact = () => {
                                             />
                                         </div><br />
                                         <div className="col-span-6">
-                                            <label htmlFor="email" className="block text-md font-medium text-gray-700">
+                                            <label htmlFor="email" className="block text-md font-medium text-gray-700 dark:text-gray-200">
                                                 Email ID
                                             </label>
                                             <input
@@ -41,7 +41,7 @@ const Contact = () => {
                                             />
                                         </div><br />
                                         <div className="col-span-6">
-                                            <label htmlFor="subject" className="block text-md font-medium text-gray-700">
+                                            <label htmlFor="subject" className="block text-md font-medium text-gray-700 dark:text-gray-200">
                                                 Subject
                                             </label>
                                             <input
@@ -52,9 +52,9 @@ const Contact = () => {
                                                 className="mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                             />
                                         </div><br />
-                                        <div className="bg-white space-y-6">
+                                        <div className="space-y-6">
                                             <div>
-                                                <label htmlFor="message" className="block text-md font-medium text-gray-700">
+                                                <label htmlFor="message" className="block text-md font-medium text-gray-700 dark:text-gray-200">
                                                     Message
                                                 </label>
                                                 <div className="mt-1">
@@ -69,7 +69,7 @@ const Contact = () => {
 
                                             </div>
                                         </div><br />
-                                        <div className="bg-gray-50 text-right">
+                                        <div className="text-right">
                                             <button
                                                 type="submit"
                                                 className="inline-flex justify-center py-2 w-full px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-comsocgreen hover:bg-comsocgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-comsocgreen"
