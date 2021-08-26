@@ -22,14 +22,14 @@ const Team = () => {
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Samank Gupta</h1>
-                            <h2 className="font-normal text-gray-600">President</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">President</h2>
                         </div>
                     </div>
                     <div className="grid justify-items-start">
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Tanay Bhadula</h1>
-                            <h2 className="font-normal text-gray-600">Vice President</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Vice President</h2>
                         </div>
                     </div>
                 </div>
@@ -38,21 +38,21 @@ const Team = () => {
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Sanika Kulkarni</h1>
-                            <h2 className="font-normal text-gray-600">General Secretary</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">General Secretary</h2>
                         </div>
                     </div>
                     <div className="grid justify-items-center">
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Mainak Sengupta</h1>
-                            <h2 className="font-normal text-gray-600">Technical Head</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Technical Head</h2>
                         </div>
                     </div>
                     <div className="grid justify-items-start">
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Swapnal Varma</h1>
-                            <h2 className="font-normal text-gray-600">Joint General Secretary</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Joint General Secretary</h2>
                         </div>
                     </div>
                 </div>
@@ -61,21 +61,21 @@ const Team = () => {
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Tejas Vaichole</h1>
-                            <h2 className="font-normal text-gray-600">Design Head</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Design Head</h2>
                         </div>
                     </div>
                     <div className="grid justify-items-center">
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Gunja Pandey</h1>
-                            <h2 className="font-normal text-gray-600">Public Relations Head</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Public Relations Head</h2>
                         </div>
                     </div>
                     <div className="grid justify-items-start">
                         <div>
                             <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" className="h-48" alt="Person"></img>
                             <h1 className="text-bold text-xl my-4">Prathiba Narayan</h1>
-                            <h2 className="font-normal text-gray-600">Design Head</h2>
+                            <h2 className="font-normal text-gray-600 dark:text-gray-400">Design Head</h2>
                         </div>
                     </div>
                 </div>

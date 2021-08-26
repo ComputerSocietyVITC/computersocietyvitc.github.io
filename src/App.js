@@ -17,7 +17,7 @@ import Error from './Pages/Error.js'
 
 function App() {
 
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState("dark");
 
   React.useEffect(() => {
     window.addEventListener("storage", () => {

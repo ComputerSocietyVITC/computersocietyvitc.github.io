@@ -8,8 +8,8 @@ const Contact = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-2">
-                <div>
-                    <h2 className="text-5xl text-left sm:ml-40 mt-16" style={{ textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }}>Contact Us</h2>
+                <div className="pb-16">
+                    <h2 className="text-5xl text-left sm:ml-40 mt-12" style={{ textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }}>Contact Us</h2>
                     <div>
                         <div className="sm:ml-40 mt-12 sm:mr-24">
                             <div className="mt-5 md:mt-0 md:col-span-2 text-left">
@@ -82,14 +82,8 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="hidden sm:block" aria-hidden="true">
-                        <div className="py-5">
-                            <div className="border-t border-gray-200" />
-                        </div>
-                    </div>
                 </div>
-                <div className="sm:mr-40 sm:mt-36 sm:ml-24">
+                <div className="sm:mr-40 sm:mt-40 sm:ml-24">
                     <h2 className="text-lg font-medium text-left mb-4">Address</h2>
                     <p className="text-lg text-left">Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu 600127</p><br />
                     <h2 className="text-lg font-medium text-left mb-4">Email ID</h2>
