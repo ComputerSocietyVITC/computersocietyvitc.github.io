@@ -14,6 +14,7 @@ export default function Navbar({ fixed }) {
     else
       setTheme("light")
   }
+
   return (
     <div className={theme}>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white dark:bg-gray-800 mb-3 mx-24">
@@ -43,37 +44,37 @@ export default function Navbar({ fixed }) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <Link to="/"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Home</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Team"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="link-underline fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Team</span>
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Team</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Events"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Events</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Projects"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Projects</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Blogs"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Blogs</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/Contact"
-                  className="link-underline px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Contact</span>
                 </Link>
               </li>
