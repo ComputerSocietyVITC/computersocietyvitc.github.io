@@ -27,7 +27,6 @@ const Team = () => {
                         className="w-12 h-12 items-center mt-14"
                     />
                 </div>
-
             </div>
             <div className="pt-20">
                 <h1 className="text-5xl my-24" ref={obRef}>Office Bearers</h1>
