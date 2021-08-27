@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
+
 import teamimage from "../images/teamimage.png"
+import down from "../images/down.png"
 
 const Team = () => {
+
+    const obRef = useRef(null)
+
     return (
         <div>
             <div className="h-full pt-20">
@@ -14,9 +19,18 @@ const Team = () => {
                         <img src={teamimage} alt="Team Image"></img>
                     </div>
                 </div>
+                <div className="flex justify-center">
+                    <img
+                        onClick={() => obRef.current.scrollIntoView({ behavior: "smooth" })}
+                        src={down}
+                        alt="down arrow"
+                        className="w-12 h-12 items-center mt-14"
+                    />
+                </div>
+
             </div>
             <div className="pt-20">
-                <h1 className="text-5xl my-24">Office Bearers</h1>
+                <h1 className="text-5xl my-24" ref={obRef}>Office Bearers</h1>
                 <div className="grid grid-cols-2 gap-52">
                     <div className="grid justify-items-end">
                         <div>
