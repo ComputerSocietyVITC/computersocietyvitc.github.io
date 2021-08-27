@@ -35,7 +35,7 @@ const Home = () => {
         </h1>
         <div className="mt-6 text-2xl flex justify-center">
           <p className="w-2/4 whitespace-pre-wrap">
-            Our Vision We think slightly out of the box, we believe that a
+            We think slightly out of the box, we believe that a
             club’s resources must not only be channeled into conducting events
             but also to propagate learning and teaching, symbiotically.
 
