@@ -27,7 +27,7 @@ const Events = () => {
           className="w-14 h-14 items-center m-4"
         />
       </div>
-        </div>
+      </div>
     )
 }
 
