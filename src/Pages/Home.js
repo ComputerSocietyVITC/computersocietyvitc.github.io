@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import robotAnimation from "../images/chatbot.svg";
 import ieeeLogo from "../images/comsocLogowhite.png";
 import down from "../images/down.png"
-import team from "../images/meettheteam.png"
+import team from "../images/meettheteam.svg"
 import idea from "../images/submitidea.png"
 import instagram from '../images/instagram.png'
 import github from '../images/github.png'
@@ -24,7 +24,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src={robotAnimation} className="" alt="" />
+         <img src={robotAnimation} className="" alt="" />
         </div>
       </div>
 
@@ -36,79 +36,125 @@ const Home = () => {
         />
       </div>
 
-      <div className="grid grid-cols-3 grid-rows-2 place-items-center">
+      <div className="grid grid-cols-3 grid-rows-2" >
         <div className="col-span-1 row-span-2">
-            <img src={team} className="h-50" alt="" />
+          <img src={team} className="" alt="meet the team" />
         </div>
         <div className="my-10 col-span-2 row-span-1">
-          <h1 className="text-5xl">
+          <h1 className="text-5xl w-2/4">
             <span className="text-comsocgreen">Our</span> Vision
           </h1>
-          <div className="mt-6 text-2xl flex justify-center">
+          <div className="mt-6 text-2xl flex ">
             <p className="w-2/4 whitespace-pre-wrap">
-              We think slightly out of the box, we believe that a
-              club’s resources must not only be channeled into conducting events
-              but also to propagate learning and teaching, symbiotically.
-
-              That said, we conduct two flagship events, namely, HackHub and
-              Paradox, and tons of insightful workshops!
+              We think slightly out of the box, we believe that a club’s
+              resources must not only be channeled into conducting events but
+              also to propagate learning and teaching, symbiotically. That said,
+              we conduct two flagship events, namely, HackHub and Paradox, and
+              tons of insightful workshops!
             </p>
           </div>
         </div>
-        
-        <div className="my-10 col-span-2 row-span-1">
-          <h1 className="text-5xl">
+
+        <div className="my-10 col-span-2 row-span-1" data-aos="fade-right">  
+          <h1 className="text-5xl w-2/4">
             <span className="text-comsocgreen">Meet</span> The Team
           </h1>
-          <div className="mt-6 text-2xl flex justify-center">
+          <div className="mt-6 text-2xl flex">
             <p className="w-2/4 whitespace-pre-wrap">
-            We have got a strong team filled with caffeine addicted developers, gradient loving designers and machine like working managers.
-            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5"><Link to="/Team">The Team</Link></div>
-            </p>  
+              We have got a strong team filled with caffeine addicted
+              developers, gradient loving designers and machine like working
+              managers.
+              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
+                <Link to="/Team">The Team</Link>
+              </div>
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-3 place-items-end">
-        <div className="my-10 col-span-2">
-          <h1 className="text-5xl">
-            <span className="text-comsocgreen">Submit</span> An Idea
-          </h1>
-          <div className="mt-6 text-2xl flex justify-center">
+      <div className="grid grid-cols-3 " data-aos="fade-left">
+        <div className="md-10 col-span-2"  > 
+          <div className="flex justify-end">
+            <h1 className="text-5xl w-2/4">
+              <span className="text-comsocgreen">Submit</span> An Idea
+            </h1>
+          </div>
+          
+          <div className="mt-6 text-2xl flex justify-end">
             <p className="w-2/4 whitespace-pre-wrap">
-            Didn't find the right team to implement yout project idea? Join us to make it come alive.
-            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/4"><Link to="/">Submit Idea</Link></div>
-            </p>  
+              Didn't find the right team to implement yout project idea? Join us
+              to make it come alive.
+              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/4">
+                <Link to="/">Submit Idea</Link>
+              </div>
+            </p>
           </div>
         </div>
         <div className="col-span-1 row-span-2">
-            <img src={idea} className="w-1/2 h-1/2" alt="" />
+          <img src={idea} className="ml-8 w-2/3" alt="" />
         </div>
       </div>
 
-      <div className="my-10">
+      <div className="my-5" data-aos="fade-right">
         <h1 className="text-5xl">
           <span className="text-comsocgreen">Newsletter</span>
         </h1>
         <div className="mt-6 text-2xl flex justify-center">
           <p className="w-2/4 whitespace-pre-wrap">
-           Want to stay updated about with the latest events and workshops conducted by us? Enter your email address to never miss out on anything.
-           <div><input className = "mt-4 bg-gray-200 w-2/5" placeholder="Enter your email" type="text" /></div>
-           <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5"><Link to="/">Subscribe</Link></div>
-          </p>  
+            Want to stay updated about with the latest events and workshops
+            conducted by us? Enter your email address to never miss out on
+            anything.
+            <div>
+              <input
+                className="mt-4 bg-gray-200 w-2/5"
+                placeholder="Enter your email"
+                type="text"
+              />
+            </div>
+            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
+              <Link to="/">Subscribe</Link>
+            </div>
+          </p>
         </div>
       </div>
-      <div className="my-10">
+      <div className="my-10" data-aos="fade-left">
         <h1 className="text-5xl">
           <span className="text-comsocgreen">Connect</span> with Us
         </h1>
         <p className="mt-5 text-xl underline">We are active on</p>
         <div className="w-1/5 mt-5 ml-auto mr-auto">
           <div className="grid grid-cols-4 gap-2">
-            <a href="https://www.instagram.com/comsoc.vitcc/" target="_blank"><img src={instagram} alt="Instagram" className="h-10 col-span-1  ml-auto mr-auto"></img></a>
-            <a href="https://github.com/ComputerSocietyVITC" target="_blank"><img src={github} alt="Github" className="h-10 col-span-1  ml-auto mr-auto"></img></a>
-            <a href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/" target="_blank"><img src={linkedin} alt="LinkedIn" className="h-11 col-span-1  ml-auto mr-auto"></img></a>
-            <a href="https://discord.gg/6vkY3kcZnE" target="_blank"><img src={discord} alt="Discord" className="h-10 col-span-1  ml-auto mr-auto"></img></a>
+            <a href="https://www.instagram.com/comsoc.vitcc/" target="_blank">
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="h-10 col-span-1  ml-auto mr-auto"
+              ></img>
+            </a>
+            <a href="https://github.com/ComputerSocietyVITC" target="_blank">
+              <img
+                src={github}
+                alt="Github"
+                className="h-10 col-span-1  ml-auto mr-auto"
+              ></img>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/"
+              target="_blank"
+            >
+              <img
+                src={linkedin}
+                alt="LinkedIn"
+                className="h-11 col-span-1  ml-auto mr-auto"
+              ></img>
+            </a>
+            <a href="https://discord.gg/6vkY3kcZnE" target="_blank">
+              <img
+                src={discord}
+                alt="Discord"
+                className="h-10 col-span-1  ml-auto mr-auto"
+              ></img>
+            </a>
           </div>
         </div>
       </div>

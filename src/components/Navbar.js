@@ -6,6 +6,22 @@ import moon from "../images/moon.png"
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [pageSelected, setPageSelected] = React.useState({
+    "home": false,
+    "team": false,
+    "events": false,
+    "projects": false,
+    "blogs": false,
+    "contact": false,
+  })
+
+  React.useEffect(() => {
+    let pageName = window.location.href.toLowerCase().split('/').slice(-1)[0]
+    if (pageName === '')
+      setPageSelected({ ...pageSelected, home: true })
+    else
+      setPageSelected({ ...pageSelected, [pageName]: true })
+  }, [])
 
   const [theme, setTheme] = React.useState("light");
 
@@ -20,6 +36,8 @@ export default function Navbar(props) {
       localStorage.setItem("theme", "light")
     window.dispatchEvent(new Event('storage'))
   }
+
+  let pageSelectedStyle = { textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }
 
   return (
     <div>
@@ -49,39 +67,53 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
-                <Link to="/"
+                <Link
+                  to="/"
+                  onClick={() => setPageSelected({
+                    ...pageSelected, home: true, "team": false, "events": false, "projects": false, "blogs": false, "contact": false
+                  })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Home</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.home ? pageSelectedStyle : {}}>Home</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Team"
+                <Link
+                  to="/Team"
+                  onClick={() => setPageSelected({ ...pageSelected, home: false, "team": true, "events": false, "projects": false, "blogs": false, "contact": false })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Team</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.team ? pageSelectedStyle : {}}>Team</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Events"
+                <Link
+                  to="/Events"
+                  onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": true, "projects": false, "blogs": false, "contact": false })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Events</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.events ? pageSelectedStyle : {}}>Events</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Projects"
+                <Link
+                  to="/Projects"
+                  onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": true, "blogs": false, "contact": false })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Projects</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.projects ? pageSelectedStyle : {}}>Projects</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Blogs"
+                <Link
+                  to="/Blogs"
+                  onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": false, "blogs": true, "contact": false })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Blogs</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.blogs ? pageSelectedStyle : {}}>Blogs</span>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Contact"
+                <Link
+                  to="/Contact"
+                  onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": false, "blogs": false, "contact": true })}
                   className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2">Contact</span>
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.contact ? pageSelectedStyle : {}}>Contact</span>
                 </Link>
               </li>
               <li className="nav-item ml-8">
