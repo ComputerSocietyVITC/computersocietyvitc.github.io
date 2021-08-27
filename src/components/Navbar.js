@@ -37,18 +37,18 @@ export default function Navbar(props) {
     window.dispatchEvent(new Event('storage'))
   }
 
-  let pageSelectedStyle = { textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }
+  let pageSelectedStyle = { paddingBottom:"6px", borderBottom: "2.5px solid #29DB9B", textUnderlinePosition: "under"}
 
   return (
     <div>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 mx-24 dark:bg-darktheme">
+      <nav className="w-11/12 z-10 fixed flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 mx-24 dark:bg-darktheme">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase "
               to="/"
             >
-              <img className="w-14" src={comsoclogo} alt="Comsoc Logo"></img>
+              <img className="w-11" src={comsoclogo} alt="Comsoc Logo"></img>
             </Link>
             <button
               className=" cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

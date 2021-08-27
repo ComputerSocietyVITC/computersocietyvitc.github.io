@@ -42,6 +42,7 @@ const Home = () => {
           className="w-14 h-14 items-center m-4 cursor-pointer"
         />
       </div>
+      
 
       <div className="grid grid-cols-3 grid-rows-2" >
         <div className="col-span-1 row-span-2" data-aos="fade-left">

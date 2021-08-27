@@ -11,11 +11,11 @@ const Team = () => {
         <div>
             <div className="h-full pt-20">
                 <div className="grid grid-cols-2 gap-2">
-                    <div className="sm:ml-40 mt-32">
+                    <div className="sm:ml-40 mt-48">
                         <h1 className="text-6xl text-left"><span className="text-comsocgreen">The</span> Team</h1>
                         <p className="text-2xl text-left mt-6">Presenting the board of 2021-2022</p>
                     </div>
-                    <div>
+                    <div className="mt-20">
                         <img src={teamimage} alt="Team Image"></img>
                     </div>
                 </div>
@@ -24,13 +24,12 @@ const Team = () => {
                         onClick={() => obRef.current.scrollIntoView({ behavior: "smooth" })}
                         src={down}
                         alt="down arrow"
-                        className="w-12 h-12 items-center mt-14"
+                        className="w-12 h-12 items-center m-4"
                     />
                 </div>
-
             </div>
-            <div className="pt-20">
-                <h1 className="text-5xl my-24" ref={obRef}>Office Bearers</h1>
+            <div className="pt-1">
+                <h1 className="text-5xl my-10" ref={obRef}>Office Bearers</h1>
                 <div className="grid grid-cols-2 gap-52">
                     <div className="grid justify-items-end">
                         <div>

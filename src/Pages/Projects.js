@@ -15,7 +15,7 @@ const Projects = () => {
         <div>
             <div className="h-full pt-20">
                 <div className="grid grid-cols-2 gap-2">
-                    <div className="sm:ml-40 mt-32">
+                    <div className="sm:ml-40 mt-44">
                         <h1 className="text-6xl text-left"><span className="text-comsocgreen">Our</span> Projects</h1>
                         <p className="text-2xl text-left mt-6">We are working on a few funded high-level projects in collaboration with various organisations to help the students gain industrial exposure and also get interesting internship opportunities.</p>
                     </div>
@@ -23,12 +23,12 @@ const Projects = () => {
                         <img src={projectsimage} className="ml-32 w-4/6" alt="Projects Image"></img>
                     </div>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-20">
                     <img
                         onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
                         src={down}
                         alt="down arrow"
-                        className="w-12 h-12 items-center mt-8"
+                        className="w-12 h-12 items-center m-4"
                     />
                 </div>
             </div>
