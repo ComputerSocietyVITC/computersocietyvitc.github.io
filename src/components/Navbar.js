@@ -37,7 +37,7 @@ export default function Navbar(props) {
     window.dispatchEvent(new Event('storage'))
   }
 
-  let pageSelectedStyle = { textDecoration: "1px underline #29DB9B", textUnderlinePosition: "under" }
+  let pageSelectedStyle = { textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }
 
   return (
     <div>
