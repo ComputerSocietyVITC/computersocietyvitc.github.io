@@ -92,6 +92,7 @@ const Home = () => {
         </h1>
         <div className="mt-6 text-2xl flex justify-center">
           <p className="w-2/4 whitespace-pre-wrap">
+
            Want to stay updated about with the latest events and workshops conducted by us? Enter your email address to never miss out on anything.
            <div><input className = "mt-4 bg-gray-200 w-2/5" placeholder="Enter your email" type="text" /></div>
            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5"><Link to="/">Subscribe</Link></div>

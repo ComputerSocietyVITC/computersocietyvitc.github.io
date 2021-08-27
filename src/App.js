@@ -1,7 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 // Import Components
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
@@ -18,6 +19,14 @@ import Error from './Pages/Error.js'
 function App() {
 
   const [theme, setTheme] = React.useState("dark");
+
+  React.useEffect(() => {
+    Aos.init({
+      once: true,
+      duration: 500,
+      easing: 'ease-out-cubic',
+    })
+  }, [])
 
   React.useEffect(() => {
     window.addEventListener("storage", () => {
