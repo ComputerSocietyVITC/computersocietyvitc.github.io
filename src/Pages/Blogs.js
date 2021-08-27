@@ -4,9 +4,9 @@ import blogging from "../images/blogging.png";
 
 const Blogs = () => {
     return (
-        <div className="mb-36">
+        <div className="mb-40">
            <div className="grid grid-cols-2">
-        <div className="ml-40 mt-28">
+        <div className="ml-40 mt-56">
         <h1 className="text-5xl text-left">
           <span className="text-comsocgreen">Our</span> Blogs
         </h1>
@@ -14,7 +14,7 @@ const Blogs = () => {
           Coming Soon...
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-24">
           <img src={blogging} className="w-9/12 h-9/12" alt="" />
         </div>
       </div>

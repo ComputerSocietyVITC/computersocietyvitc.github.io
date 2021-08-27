@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <div className="grid grid-cols-2">
-        <div className="ml-40 mt-28">
+        <div className="ml-40 mt-48">
           <img src={ieeeLogo} className="w-96 h-34" alt="" />
           <div className="mt-8 font text-2xl text-left text-opacity-50 ">
             At IEEE Computer Society VIT Chennai, our aim is to learn and teach.
@@ -23,7 +23,7 @@ const Home = () => {
             create a community which inspires thousands. Join Us!
           </div>
         </div>
-        <div>
+        <div className="mt-20">
          <img src={robotAnimation} className="" alt="" />
         </div>
       </div>
@@ -32,7 +32,7 @@ const Home = () => {
         <img
           src={down}
           alt="down arrow"
-          className="w-14 h-14 items-center m-4"
+          className="w-12 h-12 items-center m-4"
         />
       </div>
 

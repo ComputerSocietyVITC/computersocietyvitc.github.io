@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-2">
-                <div className="pb-16">
+                <div className="pb-16 mt-14">
                     <h2 className="text-5xl text-left sm:ml-40 mt-12" style={{ textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }}>Contact Us</h2>
                     <div>
                         <div className="sm:ml-40 mt-12 sm:mr-24">
