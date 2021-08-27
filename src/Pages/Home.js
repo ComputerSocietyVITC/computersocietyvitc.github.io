@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div>
       <div className="grid lg:grid-cols-2">
-        <div className="ml-40 mt-28">
+        <div className="ml-40 mt-48">
           <img src={ieeeLogo} className="w-96 h-34" alt="" />
           <div className="mt-8 font text-xl xl:text-2xl  text-left text-opacity-50 ">
             At IEEE Computer Society VIT Chennai, our aim is to learn and teach.
@@ -29,12 +29,12 @@ const Home = () => {
             create a community which inspires thousands. Join Us!
           </div>
         </div>
-        <div className="hidden lg:flex" style={{ height:"35rem" }}>
+        <div className=" mt-20 hidden lg:flex" style={{ height:"35rem" }}>
           <LottieAnimation className=""lotti={robot} />
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div ref={prRef} className="flex justify-center">
         <img
           onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
           src={down}
@@ -42,13 +42,13 @@ const Home = () => {
           className="w-14 h-14 items-center m-4 cursor-pointer"
         />
       </div>
-      
 
-      <div className="grid grid-cols-3 grid-rows-2" >
+
+      <div   className="grid grid-cols-3 grid-rows-2" >
         <div className="col-span-1 row-span-2" data-aos="fade-left">
           <img src={team} className="" alt="meet the team" />
         </div>
-        <div ref={prRef} className="my-10 col-span-2 row-span-1" data-aos="fade-left">
+        <div className="my-10 col-span-2 row-span-1" data-aos="fade-left">
           <h1 className="text-5xl w-2/4">
             <span className="text-comsocgreen">Our</span> Vision
           </h1>
