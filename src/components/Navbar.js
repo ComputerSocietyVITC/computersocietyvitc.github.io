@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import comsoclogo from "../images/comsoclogo.png"
 import sun from "../images/sun.png"
-import moon from "../images/moon.png"
+import moon from "../images/half-moon.png"
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -118,9 +118,9 @@ export default function Navbar(props) {
               </li>
               <li className="nav-item ml-8">
                 {theme === "light" ?
-                  <img src={moon} className="h-10" alt="moon" onClick={handleThemeToggle}></img>
+                  <img src={moon} className="h-8" alt="moon" onClick={handleThemeToggle}></img>
                   :
-                  <img src={sun} className="h-10" alt="sun" onClick={handleThemeToggle}></img>
+                  <img src={sun} className="h-8" alt="sun" onClick={handleThemeToggle}></img>
                 }
               </li>
             </ul>
