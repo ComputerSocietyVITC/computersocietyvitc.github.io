@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useRef } from 'react'
 import robotAnimation from "../images/chatbot.svg";
 import ieeeLogo from "../images/comsocLogowhite.png";
 import down from "../images/down.png"
@@ -12,6 +13,7 @@ import discord from '../images/discord.png'
 import homepageend from '../images/homepageend.svg'
 
 const Home = () => {
+   const prRef = useRef(null)
   return (
     <div>
       <div className="grid grid-cols-2">

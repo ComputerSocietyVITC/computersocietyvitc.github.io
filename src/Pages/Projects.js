@@ -23,7 +23,7 @@ const Projects = () => {
                         <img src={projectsimage} className="ml-32 w-4/6" alt="Projects Image"></img>
                     </div>
                 </div>
-                <div className="flex justify-center mt-20">
+                <div className="flex justify-center mt-10">
                     <img
                         onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
                         src={down}
