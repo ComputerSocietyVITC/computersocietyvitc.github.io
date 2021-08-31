@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import robotAnimation from "../images/chatbot.svg";
 import ieeeLogo from "../images/comsocLogowhite.png";
 import down from "../images/down.png"
@@ -16,8 +15,6 @@ import robot from '../images/Chatbot.json';
 import LottieAnimation from '../Lottie';
 
 const Home = () => {
-  const prRef = React.useRef(null);
-
   return (
     <div>
       <div className="grid lg:grid-cols-2">
