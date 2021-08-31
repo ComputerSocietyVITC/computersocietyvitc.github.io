@@ -32,8 +32,8 @@ const Projects = () => {
                     />
                 </div>
             </div>
-            <div className="mx-40 pt-20">
-                <div ref={prRef} className="grid grid-cols-2 gap-24" data-aos="fade-up">
+            <div ref={prRef} className="mx-40 pt-20">
+                <div className="grid grid-cols-2 gap-24" data-aos="fade-up">
                     <img src={brain} className="mt-12" alt="Brain"></img>
                     <div>
                         <h1 className="text-left text-comsocgreen text-3xl">Brain Computer Interface</h1><br />
