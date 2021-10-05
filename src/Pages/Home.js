@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useRef } from 'react'
 import robotAnimation from "../images/chatbot.svg";
 import ieeeLogo from "../images/comsocLogowhite.png";
 import down from "../images/down.png";
@@ -16,6 +17,7 @@ const Home = () => {
     height: "50px",
     width: "50px",
   };
+  const prRef = useEffect(null)
   return (
     <div>
       <div className="grid lg:grid-cols-2">
@@ -32,9 +34,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div ref = {prRef} className="flex justify-center">
         <img
-          // onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
           src={down}
           alt="down arrow"
           className="w-14 h-14 items-center m-4 cursor-pointer"
