@@ -2,19 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import robotAnimation from "../images/chatbot.svg";
 import ieeeLogo from "../images/comsocLogowhite.png";
-import down from "../images/down.png"
-import team from "../images/meettheteam.svg"
-import idea from "../images/submitidea.png"
-import instagram from '../images/instagram.png'
-import github from '../images/github.png'
-import linkedin from '../images/linked-in.png'
-import discord from '../images/discord.png'
-import homepageend from '../images/homepageend.svg'
-import robot from '../images/Chatbot.json';
-
-import LottieAnimation from '../Lottie';
+import down from "../images/down.png";
+import team from "../images/meettheteam.svg";
+import idea from "../images/submitidea.png";
+import { SiInstagram, SiGithub, SiDiscord, SiLinkedin } from "react-icons/si";
+import homepageend from "../images/homepageend.svg";
+import robot from "../images/Chatbot.json";
+import Button from "@mui/material/Button";
+import LottieAnimation from "../Lottie";
 
 const Home = () => {
+  const IconStyles = {
+    height: "50px",
+    width: "50px",
+  };
   return (
     <div>
       <div className="grid lg:grid-cols-2">
@@ -26,22 +27,21 @@ const Home = () => {
             create a community which inspires thousands. Join Us!
           </div>
         </div>
-        <div className=" mt-20 hidden lg:flex" style={{ height:"35rem" }}>
-          <LottieAnimation className=""lotti={robot} />
+        <div className=" mt-20 hidden lg:flex" style={{ height: "35rem" }}>
+          <LottieAnimation className="" lotti={robot} />
         </div>
       </div>
 
-      <div ref={prRef} className="flex justify-center">
+      <div className="flex justify-center">
         <img
-          onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
+          // onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
           src={down}
           alt="down arrow"
           className="w-14 h-14 items-center m-4 cursor-pointer"
         />
       </div>
 
-
-      <div   className="grid grid-cols-3 grid-rows-2" >
+      <div className="grid grid-cols-3 grid-rows-2">
         <div className="col-span-1 row-span-2" data-aos="fade-left">
           <img src={team} className="" alt="meet the team" />
         </div>
@@ -60,7 +60,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="my-10 col-span-2 row-span-1" data-aos="fade-right">  
+        <div className="my-10 col-span-2 row-span-1" data-aos="fade-right">
           <h1 className="text-5xl w-2/4">
             <span className="text-comsocgreen">Meet</span> The Team
           </h1>
@@ -69,29 +69,31 @@ const Home = () => {
               We have got a strong team filled with caffeine addicted
               developers, gradient loving designers and machine like working
               managers.
-              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
-                <Link to="/Team">The Team</Link>
-              </div>
+              <br/>
+              <Button variant = "contained">
+                  <Link to="/Team">The Team</Link>
+              </Button>
             </p>
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-3 " data-aos="fade-left">
-        <div className="md-10 col-span-2"  > 
+        <div className="md-10 col-span-2">
           <div className="flex justify-end">
             <h1 className="text-5xl w-2/4">
               <span className="text-comsocgreen">Submit</span> An Idea
             </h1>
           </div>
-          
+
           <div className="mt-6 text-2xl flex justify-end">
             <p className="w-2/4 whitespace-pre-wrap">
               Didn't find the right team to implement yout project idea? Join us
               to make it come alive.
-              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/4">
+            <br/>
+             <Button variant = "contained">
                 <Link to="/">Submit Idea</Link>
-              </div>
+              </Button>
             </p>
           </div>
         </div>
@@ -116,9 +118,9 @@ const Home = () => {
                 type="text"
               />
             </div>
-            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
-              <Link to="/">Subscribe</Link>
-            </div>
+            <Button variant = "contained">
+                <Link to="/">Subscribe</Link>
+              </Button>
           </p>
         </div>
       </div>
@@ -130,35 +132,31 @@ const Home = () => {
         <div className="w-1/5 mt-5 ml-auto mr-auto">
           <div className="grid grid-cols-4 gap-2">
             <a href="https://www.instagram.com/comsoc.vitcc/" target="_blank">
-              <img
-                src={instagram}
-                alt="Instagram"
+              <SiInstagram
+                style={IconStyles}
                 className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
+              />
             </a>
             <a href="https://github.com/ComputerSocietyVITC" target="_blank">
-              <img
-                src={github}
-                alt="Github"
+              <SiGithub
                 className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
+                style={IconStyles}
+              />
             </a>
             <a
               href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/"
               target="_blank"
             >
-              <img
-                src={linkedin}
-                alt="LinkedIn"
+              <SiLinkedin
                 className="h-11 col-span-1  ml-auto mr-auto"
-              ></img>
+                style={IconStyles}
+              />
             </a>
             <a href="https://discord.gg/6vkY3kcZnE" target="_blank">
-              <img
-                src={discord}
-                alt="Discord"
+              <SiDiscord
+                style={IconStyles}
                 className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
+              />
             </a>
           </div>
         </div>
