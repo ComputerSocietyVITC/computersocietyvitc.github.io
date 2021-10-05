@@ -17,7 +17,10 @@ const Home = () => {
     height: "50px",
     width: "50px",
   };
-  const prRef = useEffect(null)
+  const ButtonStyles = {
+    fontStyles:"Open Sans"
+  };
+  const prRef = useRef(null);
   return (
     <div>
       <div className="grid lg:grid-cols-2">
@@ -72,7 +75,7 @@ const Home = () => {
               developers, gradient loving designers and machine like working
               managers.
               <br/>
-              <Button variant = "contained">
+              <Button style = {ButtonStyles} style = {ButtonStyles} variant = "contained">
                   <Link to="/Team">The Team</Link>
               </Button>
             </p>
@@ -93,7 +96,7 @@ const Home = () => {
               Didn't find the right team to implement yout project idea? Join us
               to make it come alive.
             <br/>
-             <Button variant = "contained">
+             <Button style = {ButtonStyles} variant = "contained">
                 <Link to="/">Submit Idea</Link>
               </Button>
             </p>
@@ -120,7 +123,7 @@ const Home = () => {
                 type="text"
               />
             </div>
-            <Button variant = "contained">
+            <Button style = {ButtonStyles} variant = "contained">
                 <Link to="/">Subscribe</Link>
               </Button>
           </p>
