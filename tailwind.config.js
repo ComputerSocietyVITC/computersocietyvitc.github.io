@@ -5,8 +5,16 @@ module.exports = {
     extend: {
       colors: {
         'comsocgreen': '#29DB9B',
-        'darktheme': '#15202B',
-      }
+        'color1': '#16C79E',
+        'color2': '#C5DA45',
+        'bgcolor1': '#171717',
+        'bgcolor2': '#333b4a'
+      },
+      fontFamily: {
+        sans: ['Exo', 'sans-serif'],
+        catamaran: ['Catamaran'],
+        montserrat: ['Montserrat']
+      },
     },
   },
   variants: {

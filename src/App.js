@@ -1,4 +1,6 @@
 import "./App.css";
+import "./stars.sass";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
 import Aos from 'aos'
@@ -18,8 +20,6 @@ import Error from './Pages/Error.js'
 
 function App() {
 
-  const [theme, setTheme] = React.useState("dark");
-
   React.useEffect(() => {
     Aos.init({
       once: true,
@@ -28,54 +28,36 @@ function App() {
     })
   }, [])
 
-  React.useEffect(() => {
-    window.addEventListener("storage", () => {
-      if (localStorage.getItem("theme"))
-        setTheme(localStorage.getItem("theme"))
-    });
-
-    return () => {
-      window.removeEventListener("storage", () => {
-        if (localStorage.getItem("theme"))
-          setTheme(localStorage.getItem("theme"))
-      });
-    };
-  }, []);
-
-
-
   return (
     <div className="App">
-      <div className={theme}>
-        <div className="dark:bg-darktheme dark:text-white">
-          <Router>
-            <Navbar theme={theme} />
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/Projects">
-                <Projects />
-              </Route>
-              <Route exact path="/Events">
-                <Events />
-              </Route>
-              <Route exact path="/Blogs">
-                <Blogs />
-              </Route>
-              <Route exact path="/Team">
-                <Team />
-              </Route>
-              <Route exact path="/Contact">
-                <Contact />
-              </Route>
-              <Route exact path="*">
-                <Error />
-              </Route>
-            </Switch>
-            <Footer />
-          </Router>
-        </div>
+      <div className="bg-black text-white min-h-screen">
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/Projects">
+              <Projects />
+            </Route>
+            <Route exact path="/Events">
+              <Events />
+            </Route>
+            <Route exact path="/Blogs">
+              <Blogs />
+            </Route>
+            <Route exact path="/Team">
+              <Team />
+            </Route>
+            <Route exact path="/Contact">
+              <Contact />
+            </Route>
+            <Route exact path="*">
+              <Error />
+            </Route>
+          </Switch>
+          {/* <Footer /> */}
+        </Router>
       </div>
     </div>
   );

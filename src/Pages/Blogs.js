@@ -3,31 +3,27 @@ import blogging from "../images/blogging.png";
 //import down from "../images/down.png"
 
 const Blogs = () => {
-    return (
-        <div className="mb-40">
-           <div className="grid grid-cols-2">
-        <div className="ml-40 mt-56">
-        <h1 className="text-5xl text-left">
-          <span className="text-comsocgreen">Our</span> Blogs
-        </h1>
-          <div className="mt-8 font text-2xl text-left text-opacity-50 ">
-          Coming Soon...
-          </div>
+  return (
+    <div className="h-full pt-32 mb-28">
+      <div className="grid grid-cols-2 gap-2">
+        <div className="sm:ml-40 mt-44">
+          <h1 className="text-6xl text-left"><span className="text-comsocgreen">Our</span> Blogs</h1>
+          <p className="text-2xl text-left mt-6">Coming Soon...</p>
         </div>
-        <div className="flex justify-center mt-24">
-          <img src={blogging} className="w-9/12 h-9/12" alt="" />
+        <div>
+          <img src={blogging} className="ml-32 w-4/6 pt-20" alt="Events Image"></img>
         </div>
       </div>
-
-      {/* <div className="flex justify-center">
+      {/* <div className="flex justify-center mt-16">
         <img
+          onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
           src={down}
           alt="down arrow"
-          className="w-14 h-14 items-center m-4"
+          className="w-12 h-12 items-center m-4"
         />
       </div> */}
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Blogs
