@@ -27,7 +27,18 @@ code {
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;  
   font-weight: 900;
-  font-size: 110px;
+  font-size: 100px;
   line-height: 100px;
   letter-spacing: 0.02em;
+}
+
+#flip{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#underlineGradient{
+  height: 1px;
+  background: linear-gradient(90deg, #16C79E 2.29%, #C5DA45 98.62%);
+  border-radius: 50px;
 }

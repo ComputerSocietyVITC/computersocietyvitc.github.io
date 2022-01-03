@@ -6,6 +6,7 @@ import bonetech from "../images/bonetech.gif"
 import weather from "../images/weather.gif"
 import LiveInArcade from "../images/LiveInArcade.gif"
 import FallingBlocks from "../images/FallingBlocks.gif"
+import Mountains from "../components/Mountains";
 
 const Projects = () => {
 
@@ -70,6 +71,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <Mountains />
         </div>
     )
 }

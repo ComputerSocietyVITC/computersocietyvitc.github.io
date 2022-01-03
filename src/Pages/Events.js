@@ -6,6 +6,7 @@ import paradox from "../images/paradox.png"
 import datahub from "../images/datahub.jpg"
 import hackhub from "../images/hackhub.jpeg"
 import expound from "../images/expound.jpg"
+import Mountains from "../components/Mountains";
 
 const Events = () => {
     const prRef = useRef(null)
@@ -64,6 +65,7 @@ const Events = () => {
                     <img src={expound} alt="Live In Arcade"></img>
                 </div>
             </div>
+            <Mountains />
         </div>
     )
 }

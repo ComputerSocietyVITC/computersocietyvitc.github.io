@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 
 import teamimage from "../images/teamimage.png"
 import down from "../images/down.png"
+import Mountains from '../components/Mountains'
 
 const Team = () => {
 
@@ -93,6 +94,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <Mountains />
         </div>
     )
 }

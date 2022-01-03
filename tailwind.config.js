@@ -8,7 +8,8 @@ module.exports = {
         'color1': '#16C79E',
         'color2': '#C5DA45',
         'bgcolor1': '#171717',
-        'bgcolor2': '#333b4a'
+        'bgcolor2': '#333b4a',
+        'bgcolor3': '#021E22'
       },
       fontFamily: {
         sans: ['Exo', 'sans-serif'],

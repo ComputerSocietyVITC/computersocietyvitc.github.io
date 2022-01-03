@@ -1,8 +1,9 @@
 import React from 'react'
-import instagram from '../images/instagram.png'
-import github from '../images/github.png'
-import linkedin from '../images/linked-in.png'
-import discord from '../images/discord.png'
+import instagram from '../images/socialmedia/instagram.png'
+import github from '../images/socialmedia/github.png'
+import linkedin from '../images/socialmedia/linkedin.png'
+import discord from '../images/socialmedia/discord.png'
+import Mountains from "../components/Mountains";
 
 const Contact = () => {
     return (
@@ -97,6 +98,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <Mountains />
         </div >
     )
 }
