@@ -11,6 +11,9 @@ module.exports = {
         'bgcolor2': '#333b4a',
         'bgcolor3': '#021E22'
       },
+      lineHeight: {
+        'custom': '3rem',
+      },
       fontFamily: {
         sans: ['Exo', 'sans-serif'],
         catamaran: ['Catamaran'],
