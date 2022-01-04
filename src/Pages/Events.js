@@ -29,6 +29,38 @@ const Events = () => {
         ],
     }
 
+    const styleCards = () => {
+        if (document.getElementsByClassName('slick-active')) {
+            document.getElementsByClassName('slick-active')[0].style.opacity = "0.4";
+            document.getElementsByClassName('slick-active')[1].style.opacity = "0.7";
+            document.getElementsByClassName('slick-active')[2].style.opacity = "1";
+            document.getElementsByClassName('slick-active')[3].style.opacity = "0.7";
+            document.getElementsByClassName('slick-active')[4].style.opacity = "0.4";
+        }
+    }
+
+    React.useEffect(() => {
+        styleCards();
+    }, [])
+
+    const prevSlide = () => {
+        document.getElementsByClassName('slick-active')[5].style.opacity = "0.4";
+        document.getElementsByClassName('slick-active')[0].style.opacity = "0.7";
+        document.getElementsByClassName('slick-active')[1].style.opacity = "1";
+        document.getElementsByClassName('slick-active')[2].style.opacity = "0.7";
+        document.getElementsByClassName('slick-active')[3].style.opacity = "0.4";
+        sliderRef?.slickPrev();
+    }
+
+    const nextSlide = () => {
+        document.getElementsByClassName('slick-active')[1].style.opacity = "0.4";
+        document.getElementsByClassName('slick-active')[2].style.opacity = "0.7";
+        document.getElementsByClassName('slick-active')[3].style.opacity = "1";
+        document.getElementsByClassName('slick-active')[4].style.opacity = "0.7";
+        document.getElementsByClassName('slick-active')[0].style.opacity = "0.4";
+        sliderRef?.slickNext();
+    }
+
     const hotelCards = [
         {
             imageSrc:
@@ -100,12 +132,12 @@ const Events = () => {
 
             <div className='my-24'>
                 <div className='relative z-10'>
-                    <button onClick={sliderRef?.slickPrev} className='absolute left-8 top-44'>
+                    <button onClick={prevSlide} className='absolute left-8 top-44'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <button onClick={sliderRef?.slickNext} className='absolute right-8 top-44'>
+                    <button onClick={nextSlide} className='absolute right-8 top-44'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -120,7 +152,7 @@ const Events = () => {
                 </Slider>
             </div>
 
-            {/* <Mountains /> */}
+            <Mountains />
         </div>
     )
 }
