@@ -1,172 +1,113 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import robotAnimation from "../images/chatbot.svg";
-import ieeeLogo from "../images/comsocLogowhite.png";
-import down from "../images/down.png"
-import team from "../images/meettheteam.svg"
-import idea from "../images/submitidea.png"
-import instagram from '../images/instagram.png'
-import github from '../images/github.png'
-import linkedin from '../images/linked-in.png'
-import discord from '../images/discord.png'
-import homepageend from '../images/homepageend.svg'
-import robot from '../images/Chatbot.json';
+import Typewriter from 'typewriter-effect';
+import Mountains from "../components/Mountains";
 
-import LottieAnimation from '../Lottie';
 
 const Home = () => {
+
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    window.onscroll = () => {
+      handleVisibleButton();
+    }
+  }, []);
+
+  const handleScrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  const handleVisibleButton = () => {
+    const position = window.pageYOffset;
+
+    console.log(position)
+    if (position > 400) {
+      return setVisible("goTop");
+    } else {
+      return setVisible("goTopHidden");
+    }
+  };
+
   return (
     <div>
-      <div className="grid lg:grid-cols-2">
-        <div className="ml-40 mt-48">
-          <img src={ieeeLogo} className="w-96 h-34" alt="" />
-          <div className="mt-8 font text-xl xl:text-2xl  text-left text-opacity-50 ">
-            At IEEE Computer Society VIT Chennai, our aim is to learn and teach.
-            Developers, designers and managers come together under one roof to
-            create a community which inspires thousands. Join Us!
-          </div>
-        </div>
-        <div className=" mt-20 hidden lg:flex" style={{ height:"35rem" }}>
-          <LottieAnimation className=""lotti={robot} />
+      <div>
+        <div onClick={handleScrollUp} className={"bottom-12 right-14 fixed z-20" + (visible === "goTop" ? " block" : " hidden")}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="#29DB9B">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+          </svg>
         </div>
       </div>
-
-      <div ref={prRef} className="flex justify-center">
-        <img
-          onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
-          src={down}
-          alt="down arrow"
-          className="w-14 h-14 items-center m-4 cursor-pointer"
-        />
-      </div>
-
-
-      <div   className="grid grid-cols-3 grid-rows-2" >
-        <div className="col-span-1 row-span-2" data-aos="fade-left">
-          <img src={team} className="" alt="meet the team" />
+      <div className="h-5/6">
+        <div className="font-catamaran text-left mx-4 lg:mx-28 mt-20 text-black relative" id="outlinetext">
+          <h1 className="mb-6">We are</h1>
+          <h1 className="mb-6">IEEE Computer Society</h1>
+          <h1>VIT Chennai</h1>
         </div>
-        <div className="my-10 col-span-2 row-span-1" data-aos="fade-left">
-          <h1 className="text-5xl w-2/4">
-            <span className="text-comsocgreen">Our</span> Vision
+        <div className="font-sans text-left mx-6 lg:mx-32 mt-20 text-6xl lg:text-8xl font-black text-white">
+          <Typewriter
+            options={{
+              autoStart: true,
+              loop: true
+            }}
+            onInit={(typewriter) => {
+              typewriter.typeString('Discover.')
+                .pauseFor(1000)
+                .deleteChars(8)
+                .typeString('evelop.')
+                .pauseFor(1000)
+                .deleteChars(7)
+                .typeString('eploy.')
+                .pauseFor(1000)
+                .deleteChars(6)
+                .start();
+            }} />
+        </div>
+      </div>
+      <div className="h-5/6">
+        <div className="font-sans text-right mx-4 lg:mx-40 mt-52 text-6xl lg:text-8xl font-black text-white">
+          About Us
+          <div class="h-3 w-28 rounded-md ml-auto bg-gradient-to-r from-color1 to-color2"></div>
+          <h1 className="font-montserrat text-2xl lg:text-4xl text-white my-16 lg:my-24 lg:ml-36 lg:leading-custom">
+            At IEEE Computer Society VIT Chennai, our aim is to learn and teach. Developers, designers and managers come together under one roof to create a community which inspires thousands. Join Us!
           </h1>
-          <div className="mt-6 text-2xl flex ">
-            <p className="w-2/4 whitespace-pre-wrap">
-              We think slightly out of the box, we believe that a club’s
-              resources must not only be channeled into conducting events but
-              also to propagate learning and teaching, symbiotically. That said,
-              we conduct two flagship events, namely, HackHub and Paradox, and
-              tons of insightful workshops!
-            </p>
-          </div>
         </div>
-
-        <div className="my-10 col-span-2 row-span-1" data-aos="fade-right">  
-          <h1 className="text-5xl w-2/4">
-            <span className="text-comsocgreen">Meet</span> The Team
+      </div>
+      <div className="h-screen">
+        <div className="font-sans text-left mx-4 lg:mx-40 pt-28 text-6xl lg:text-8xl font-black text-white">
+          Our Vision
+          <div class="h-3 w-40 rounded-md mr-auto ml-32 lg:ml-72 bg-gradient-to-r from-color1 to-color2"></div>
+          <h1 className="font-montserrat text-2xl lg:text-4xl text-white my-16 lg:my-24 lg:mr-36 lg:leading-custom">
+            We think slightly out of the box, we believe that a club’s resources must not only be channeled into conducting events but also to propagate learning and teaching, symbiotically.
+            <br /><br />That said, we conduct two flagship events, namely, HackHub and Paradox, and tons of insightful workshops!
           </h1>
-          <div className="mt-6 text-2xl flex">
-            <p className="w-2/4 whitespace-pre-wrap">
-              We have got a strong team filled with caffeine addicted
-              developers, gradient loving designers and machine like working
-              managers.
-              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
-                <Link to="/Team">The Team</Link>
-              </div>
+        </div>
+      </div>
+      <div className="h-5/6">
+        <div className="font-sans text-center mx-4 lg:mx-40 lg:pt-12 text-5xl lg:text-7xl font-black text-white">
+          Newsletter
+          <div class="h-3 w-40 rounded-md ml-auto bg-gradient-to-r from-color1 to-color2" id="newsletterline"></div>
+          <div className="text-xl flex justify-center">
+            <p className="font-montserrat text-2xl lg:text-3xl text-white ml-auto mr-auto mt-12 px-2 lg:px-72 text-center lg:leading-custom">
+              Want to stay updated with the latest news about IEEE CS VITC? Enter you email address and allow notifications.
             </p>
           </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-3 " data-aos="fade-left">
-        <div className="md-10 col-span-2"  > 
-          <div className="flex justify-end">
-            <h1 className="text-5xl w-2/4">
-              <span className="text-comsocgreen">Submit</span> An Idea
-            </h1>
+          <div>
+            <input
+              className="mt-12 pl-8 bg-gray-800 backdrop-opacity-20 lg:w-1/2 h-16 lg:h-20 rounded-3xl border-0 text-2xl lg:text-3xl"
+              placeholder="Enter your email"
+              type="text"
+            />
           </div>
-          
-          <div className="mt-6 text-2xl flex justify-end">
-            <p className="w-2/4 whitespace-pre-wrap">
-              Didn't find the right team to implement yout project idea? Join us
-              to make it come alive.
-              <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/4">
-                <Link to="/">Submit Idea</Link>
-              </div>
-            </p>
-          </div>
-        </div>
-        <div className="col-span-1 row-span-2">
-          <img src={idea} className="ml-8 w-2/3" alt="" />
-        </div>
-      </div>
-
-      <div className="my-5" data-aos="fade-right">
-        <h1 className="text-5xl">
-          <span className="text-comsocgreen">Newsletter</span>
-        </h1>
-        <div className="mt-6 text-2xl flex justify-center">
-          <p className="w-2/4 whitespace-pre-wrap">
-            Want to stay updated about with the latest events and workshops
-            conducted by us? Enter your email address to never miss out on
-            anything.
-            <div>
-              <input
-                className="mt-4 bg-gray-200 w-2/5"
-                placeholder="Enter your email"
-                type="text"
-              />
-            </div>
-            <div className="bg-white text-black p-1 ml-auto mr-auto mt-4 text-lg w-1/5">
-              <Link to="/">Subscribe</Link>
-            </div>
-          </p>
-        </div>
-      </div>
-      <div className="my-10" data-aos="fade-left">
-        <h1 className="text-5xl">
-          <span className="text-comsocgreen">Connect</span> with Us
-        </h1>
-        <p className="mt-5 text-xl underline">We are active on</p>
-        <div className="w-1/5 mt-5 ml-auto mr-auto">
-          <div className="grid grid-cols-4 gap-2">
-            <a href="https://www.instagram.com/comsoc.vitcc/" target="_blank">
-              <img
-                src={instagram}
-                alt="Instagram"
-                className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
-            </a>
-            <a href="https://github.com/ComputerSocietyVITC" target="_blank">
-              <img
-                src={github}
-                alt="Github"
-                className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/"
-              target="_blank"
-            >
-              <img
-                src={linkedin}
-                alt="LinkedIn"
-                className="h-11 col-span-1  ml-auto mr-auto"
-              ></img>
-            </a>
-            <a href="https://discord.gg/6vkY3kcZnE" target="_blank">
-              <img
-                src={discord}
-                alt="Discord"
-                className="h-10 col-span-1  ml-auto mr-auto"
-              ></img>
-            </a>
+          <div className="bg-gradient-to-r from-color1 to-color2 px-12 py-4 ml-auto mr-auto mt-16 text-2xl lg:text-4xl text-white w-4/5 lg:w-1/4 shadow-xl hover:shadow-md hover:from-comsocgreen" style={{ borderRadius: "50px" }}>
+            <Link to="/">Subscribe</Link>
           </div>
         </div>
       </div>
-      <div className="w-1/2 mr-auto ml-auto" data-aos="fade-top">
-        <img className="mr-auto ml-auto" src={homepageend} alt="" />
-      </div>
-    </div>
+      <Mountains />
+    </div >
   );
 };
 

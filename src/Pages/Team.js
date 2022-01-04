@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 
 import teamimage from "../images/teamimage.png"
 import down from "../images/down.png"
+import Mountains from '../components/Mountains'
 
 const Team = () => {
 
@@ -9,7 +10,7 @@ const Team = () => {
 
     return (
         <div>
-            <div className="h-full pt-20">
+            <div className="h-full pt-32">
                 <div className="grid grid-cols-2 gap-2">
                     <div className="sm:ml-40 mt-48">
                         <h1 className="text-6xl text-left"><span className="text-comsocgreen">The</span> Team</h1>
@@ -19,7 +20,7 @@ const Team = () => {
                         <img src={teamimage} alt="Team Image"></img>
                     </div>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-3">
                     <img
                         onClick={() => obRef.current.scrollIntoView({ behavior: "smooth" })}
                         src={down}
@@ -29,7 +30,7 @@ const Team = () => {
                 </div>
             </div>
             <div className="pt-1">
-                <h1 className="text-5xl my-10" ref={obRef}>Office Bearers</h1>
+                <h1 className="text-5xl my-10 mb-24" ref={obRef}>Office Bearers</h1>
                 <div className="grid grid-cols-2 gap-52">
                     <div className="grid justify-items-end">
                         <div>
@@ -93,6 +94,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <Mountains />
         </div>
     )
 }

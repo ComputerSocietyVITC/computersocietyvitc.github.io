@@ -6,6 +6,7 @@ import bonetech from "../images/bonetech.gif"
 import weather from "../images/weather.gif"
 import LiveInArcade from "../images/LiveInArcade.gif"
 import FallingBlocks from "../images/FallingBlocks.gif"
+import Mountains from "../components/Mountains";
 
 const Projects = () => {
 
@@ -13,17 +14,17 @@ const Projects = () => {
 
     return (
         <div>
-            <div className="h-full pt-20">
+            <div className="h-full pt-32">
                 <div className="grid grid-cols-2 gap-2">
                     <div className="sm:ml-40 mt-44">
                         <h1 className="text-6xl text-left"><span className="text-comsocgreen">Our</span> Projects</h1>
                         <p className="text-2xl text-left mt-6">We are working on a few funded high-level projects in collaboration with various organisations to help the students gain industrial exposure and also get interesting internship opportunities.</p>
                     </div>
                     <div>
-                        <img src={projectsimage} className="ml-32 w-4/6" alt="Projects Image"></img>
+                        <img src={projectsimage} className="ml-32 w-4/6 mt-12" alt="Projects Image"></img>
                     </div>
                 </div>
-                <div className="flex justify-center mt-10">
+                <div className="flex justify-center mt-3">
                     <img
                         onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
                         src={down}
@@ -32,7 +33,7 @@ const Projects = () => {
                     />
                 </div>
             </div>
-            <div ref={prRef} className="mx-40 pt-20">
+            <div ref={prRef} className="mx-48 pt-20">
                 <div className="grid grid-cols-2 gap-24" data-aos="fade-up">
                     <img src={brain} className="mt-12" alt="Brain"></img>
                     <div>
@@ -70,6 +71,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <Mountains />
         </div>
     )
 }

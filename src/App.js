@@ -1,4 +1,6 @@
 import "./App.css";
+import "./stars.sass";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
 import Aos from 'aos'
@@ -15,10 +17,9 @@ import Team from './Pages/Team.js'
 import Blogs from './Pages/Blogs.js'
 import Contact from './Pages/Contact.js'
 import Error from './Pages/Error.js'
+import Mountains from "./components/Mountains";
 
 function App() {
-
-  const [theme, setTheme] = React.useState("dark");
 
   React.useEffect(() => {
     Aos.init({
@@ -28,28 +29,15 @@ function App() {
     })
   }, [])
 
-  React.useEffect(() => {
-    window.addEventListener("storage", () => {
-      if (localStorage.getItem("theme"))
-        setTheme(localStorage.getItem("theme"))
-    });
-
-    return () => {
-      window.removeEventListener("storage", () => {
-        if (localStorage.getItem("theme"))
-          setTheme(localStorage.getItem("theme"))
-      });
-    };
-  }, []);
-
-
-
   return (
     <div className="App">
-      <div className={theme}>
-        <div className="dark:bg-darktheme dark:text-white">
-          <Router>
-            <Navbar theme={theme} />
+      <div className="bg-black text-white min-h-screen">
+        <Router>
+          <Navbar />
+          <div id="starrybg">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -73,9 +61,9 @@ function App() {
                 <Error />
               </Route>
             </Switch>
-            <Footer />
-          </Router>
-        </div>
+          </div>
+          <Footer />
+        </Router>
       </div>
     </div>
   );

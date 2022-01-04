@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import comsoclogo from "../images/comsoclogo.png"
-import sun from "../images/sun.png"
-import moon from "../images/half-moon.png"
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -23,39 +21,30 @@ export default function Navbar(props) {
       setPageSelected({ ...pageSelected, [pageName]: true })
   }, [])
 
-  const [theme, setTheme] = React.useState("light");
-
-  React.useEffect(() => {
-    setTheme(props.theme)
-  }, [props.theme])
-
-  const handleThemeToggle = () => {
-    if (theme === "light")
-      localStorage.setItem("theme", "dark")
-    else
-      localStorage.setItem("theme", "light")
-    window.dispatchEvent(new Event('storage'))
-  }
-
-  let pageSelectedStyle = { paddingBottom:"6px", borderBottom: "2.5px solid #29DB9B", textUnderlinePosition: "under"}
+  let pageSelectedStyle = { borderBottom: "2.2px solid #29DB9B", textUnderlinePosition: "under" }
 
   return (
     <div>
-      <nav className="w-11/12 z-10 fixed flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 mx-24 dark:bg-darktheme">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <nav className="w-full lg:w-11/12 z-10 flex flex-wrap items-center justify-between px-3 lg:mx-24 font-sans">
+        <div className="container px-4 flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase "
+              className="text-sm mt-6 font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase"
+              onClick={() => setPageSelected({
+                ...pageSelected, home: true, "team": false, "events": false, "projects": false, "blogs": false, "contact": false
+              })}
               to="/"
             >
-              <img className="w-11" src={comsoclogo} alt="Comsoc Logo"></img>
+              <img src={comsoclogo} alt="Comsoc Logo" className="h-16"></img>
             </Link>
             <button
-              className=" cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="cursor-pointer text-xl leading-none pt-4 block lg:hidden"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i className="fas fa-bars"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
           <div
@@ -63,16 +52,15 @@ export default function Navbar(props) {
               "lg:flex flex-grow items-center" +
               (navbarOpen ? " flex" : " hidden")
             }
-            id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xl pt-5 lg:pt-0 lg:text-lg">
               <li className="nav-item">
                 <Link
                   to="/"
                   onClick={() => setPageSelected({
                     ...pageSelected, home: true, "team": false, "events": false, "projects": false, "blogs": false, "contact": false
                   })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.home ? pageSelectedStyle : {}}>Home</span>
                 </Link>
               </li>
@@ -80,15 +68,15 @@ export default function Navbar(props) {
                 <Link
                   to="/Team"
                   onClick={() => setPageSelected({ ...pageSelected, home: false, "team": true, "events": false, "projects": false, "blogs": false, "contact": false })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.team ? pageSelectedStyle : {}}>Team</span>
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
+                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.team ? pageSelectedStyle : {}}>The Team</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   to="/Events"
                   onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": true, "projects": false, "blogs": false, "contact": false })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.events ? pageSelectedStyle : {}}>Events</span>
                 </Link>
               </li>
@@ -96,7 +84,7 @@ export default function Navbar(props) {
                 <Link
                   to="/Projects"
                   onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": true, "blogs": false, "contact": false })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.projects ? pageSelectedStyle : {}}>Projects</span>
                 </Link>
               </li>
@@ -104,7 +92,7 @@ export default function Navbar(props) {
                 <Link
                   to="/Blogs"
                   onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": false, "blogs": true, "contact": false })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.blogs ? pageSelectedStyle : {}}>Blogs</span>
                 </Link>
               </li>
@@ -112,16 +100,9 @@ export default function Navbar(props) {
                 <Link
                   to="/Contact"
                   onClick={() => setPageSelected({ ...pageSelected, home: false, "team": false, "events": false, "projects": false, "blogs": false, "contact": true })}
-                  className="px-3 py-2 flex items-center dark:text-white font-medium leading-snug hover:opacity-75">
+                  className="lg:px-7 py-2 lg:py-0 flex items-center text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i><span className="ml-2" style={pageSelected.contact ? pageSelectedStyle : {}}>Contact</span>
                 </Link>
-              </li>
-              <li className="nav-item ml-8">
-                {theme === "light" ?
-                  <img src={moon} className="h-8" alt="moon" onClick={handleThemeToggle}></img>
-                  :
-                  <img src={sun} className="h-8" alt="sun" onClick={handleThemeToggle}></img>
-                }
               </li>
             </ul>
           </div>

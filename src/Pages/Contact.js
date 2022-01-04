@@ -1,17 +1,18 @@
 import React from 'react'
-import instagram from '../images/instagram.png'
-import github from '../images/github.png'
-import linkedin from '../images/linked-in.png'
-import discord from '../images/discord.png'
+import instagram from '../images/socialmedia/instagram.png'
+import github from '../images/socialmedia/github.png'
+import linkedin from '../images/socialmedia/linkedin.png'
+import discord from '../images/socialmedia/discord.png'
+import Mountains from "../components/Mountains";
 
 const Contact = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-2">
-                <div className="pb-16 mt-14">
-                    <h2 className="text-5xl text-left sm:ml-40 mt-12" style={{ textDecoration: "2px underline #29DB9B", textUnderlinePosition: "under" }}>Contact Us</h2>
+                <div className="pb-16 mt-20">
+                    <h2 className="text-5xl text-left sm:ml-40 mt-12"><span className="text-comsocgreen">Contact</span> Us</h2>
                     <div>
-                        <div className="sm:ml-40 mt-12 sm:mr-24">
+                        <div className="sm:ml-40 mt-6 sm:mr-24">
                             <div className="mt-5 md:mt-0 md:col-span-2 text-left">
                                 <form>
                                     <div className="sm:rounded-md">
@@ -83,7 +84,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="sm:mr-40 sm:mt-40 sm:ml-24">
+                <div className="sm:mr-40 sm:mt-60 sm:ml-24">
                     <h2 className="text-lg font-medium text-left mb-4">Address</h2>
                     <p className="text-lg text-left">Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu 600127</p><br />
                     <h2 className="text-lg font-medium text-left mb-4">Email ID</h2>
@@ -97,7 +98,8 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            <Mountains />
+        </div >
     )
 }
 
