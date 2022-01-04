@@ -1,71 +1,126 @@
-import React from 'react'
-import { useRef } from 'react'
-import storefront from "../images/storefront.svg";
-import down from "../images/down.png"
-import paradox from "../images/paradox.png"
-import datahub from "../images/datahub.jpg"
-import hackhub from "../images/hackhub.jpeg"
-import expound from "../images/expound.jpg"
+import React, { useState } from 'react'
+import Slider from "react-slick";
 import Mountains from "../components/Mountains";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Events = () => {
-    const prRef = useRef(null)
+
+    const [sliderRef, setSliderRef] = useState(null)
+    const ref = React.createRef();
+
+    const sliderSettings = {
+        arrows: false,
+        slidesToShow: 5,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    }
+
+    const hotelCards = [
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1559508551-44bff1de756b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
+            title: 'Studio Room',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 50/Day',
+            features: ['Free Wifi', 'Free breakfast'],
+        },
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+            title: 'Deluxe Room',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 80/Day',
+            features: ['Free Wifi', 'Free breakfast'],
+        },
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1599619351208-3e6c839d6828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
+            title: 'King Deluxe Room',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 150/Day',
+            features: ['Free Wifi', 'Free breakfast', 'Discounted Meals'],
+        },
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+            title: 'Deluxe Room',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 80/Day',
+            features: ['Free Wifi', 'Free breakfast'],
+        },
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1599619351208-3e6c839d6828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
+            title: 'King Deluxe Room',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 150/Day',
+            features: ['Free Wifi', 'Free breakfast', 'Discounted Meals'],
+        },
+        {
+            imageSrc:
+                'https://images.unsplash.com/photo-1461092746677-7b4afb1178f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+            title: 'Royal Suite',
+            description: 'Lorem ipsum dolor sit amet, consectur dolori',
+            pricingText: 'USD 299/Day',
+            features: [
+                'Free Wifi',
+                'Free breakfast',
+                'Discounted Meals',
+                "MacBook for work use (hotel's property)",
+            ],
+        },
+    ]
+
     return (
         <div>
-            <div className="h-full pt-32">
-                <div className="grid grid-cols-2 gap-2">
-                    <div className="sm:ml-40 mt-44">
-                        <h1 className="text-6xl text-left"><span className="text-comsocgreen">Our</span> Events</h1>
-                        <p className="text-2xl text-left mt-6">We are working on a few funded high-level projects in collaboration with various organisations to help the students gain industrial exposure and also get interesting internship opportunities.</p>
-                    </div>
-                    <div>
-                        <img src={storefront} className="ml-32 w-4/6 pt-20" alt="Events Image"></img>
-                    </div>
-                </div>
-                <div className="flex justify-center mt-16">
-                    <img
-                        onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
-                        src={down}
-                        alt="down arrow"
-                        className="w-12 h-12 items-center m-4"
-                    />
-                </div>
+            <div className="font-catamaran text-center my-10 text-black" id="outlinetext">
+                <h1>EVENTS</h1>
             </div>
-            <div className="mx-40 pt-20">
-                <div ref={prRef} className="grid grid-cols-2 gap-24" data-aos="fade-up">
-                    <img src={hackhub} className="mt-12 h-85 w-65" alt="Hackhub"></img>
-                    <div>
-                        <h1 className="text-left text-comsocgreen text-3xl">HackHub Hackathon</h1><br />
-                        <p className="text-left text-lg">Hack-Hub 2019 was IEEE Computer Society's flagship event at VIT Chennai. It provided a gigantic platform to lock horns with the greatest minds from all over the city. The competition had a massive cash prize prize pool of 1,00,000/- INR. There were a plethora of domains to test the participant’s brains and wits like Robotics,
+            {/* <div className='mx-auto h-96 w-64 relative my-28'>
+                <div className='h-96 w-64 bg-gray-300 absolute left-0 top-0 z-10'></div>
+                <div className='h-96 w-64 bg-gray-300 absolute left-2/3 bottom-6 opacity-75'></div>
+                <div className='h-96 w-64 bg-gray-300 absolute right-2/3 bottom-6 opacity-75'></div>
+                <div className='h-96 w-64 bg-gray-300 absolute bottom-12 opacity-50' style={{ left: "115%" }}></div>
+                <div className='h-96 w-64 bg-gray-300 absolute bottom-12 opacity-50' style={{ right: "115%" }}></div>
+            </div> */}
 
-                            Internet of Things, Embedded System, Machine Learning and Artificial Intelligence. It was held from 29/03/2019 to 30/03/2019. HackHub was entirely sponsored by Euro Exim Bank.</p>
-                    </div>
+            <div className='my-24'>
+                <div className='relative z-10'>
+                    <button onClick={sliderRef?.slickPrev} className='absolute left-8 top-44'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button onClick={sliderRef?.slickNext} className='absolute right-8 top-44'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
-                <div className="grid grid-cols-2 gap-24 my-32" data-aos="fade-left">
-                    <div className="mt-12">
-                        <h1 className="text-left text-comsocgreen text-3xl">Paradox Cryptic Hunt</h1><br />
-                        <p className="text-left text-lg">Air conduction refers to sound from the outside carried by air waves from the outer ear and transferred to electrical waves in the inner ear. Bone conduction refers to sound conducted as subtle vibration along the bones to the inner ear housing the organs of hearing and balance. The sound vibration actually activates both the sense of hearing and the organ of balance. The vibration, in fact, is carried through the entire skeletal structure. We are working on a device which can facilitate this by using transducers.PARADOX was a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai. The 2021 edition of PARADOX will be held from 10 April 2021 12:00 AM IST to 11 April 2021 11:59 PM IST. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer.
-
-                            The goal of players should be to find the answer as fast as possible to stay on top of the leaderboard. At the end of two days the player at the top of leaderboard will be declared as the winner of PARADOX 2021.</p>
-                    </div>
-                    <img src={paradox} alt="Paradox"></img>
-                </div>
-                <div className="grid grid-cols-2 gap-24" data-aos="fade-right">
-                    <img src={datahub} alt="Datahub"></img>
-                    <div className="mt-12">
-                        <h1 className="text-left text-comsocgreen text-3xl">DataHub Hackathon</h1><br />
-                        <p className="text-left text-lg">We are working on a weather front end application for our college. In any front end application, the main goal is to make the user experience feel natural and intuitive. Since our application will be displayed around campus televisions we came up with a touchless interface. We use machine learning for gesture controls to control the interface without using touch. The interface is deployed on arm devices locally which are synchronized through cloud.</p>
-                    </div>
-                </div>
-                <div className="grid grid-cols-2 gap-24 my-32" data-aos="fade-left">
-                    <div>
-                        <h1 className="text-left text-comsocgreen text-3xl">Expound</h1><br />
-                        <p className="text-left text-lg">EinNel Technologies in partnership with the IEEE Computer Society Student Branch Chapter at VIT Chennai organized the EXPOund Hackathon which engaged the students to brainstorm ideas and implement them successfully to solve the problems stated to win prizes worth Rs. 25,000. It was a great experience for the participants and the winners were awarded the opportunity to continue working on their innovative solutions under the guidance of EinNel Technologies.</p>
-                    </div>
-                    <img src={expound} alt="Live In Arcade"></img>
-                </div>
+                <Slider ref={setSliderRef} {...sliderSettings} className='px-28'>
+                    {hotelCards.map((card, index) => (
+                        <div key={index} ref={ref}>
+                            <img src={card.imageSrc} alt={card.title} className='h-96 w-full' />
+                        </div>
+                    ))}
+                </Slider>
             </div>
-            <Mountains />
+
+            {/* <Mountains /> */}
         </div>
     )
 }
