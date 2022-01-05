@@ -2,8 +2,17 @@ import React, { useRef } from 'react'
 
 import teamimage from "../images/teamimage.png"
 import down from "../images/down.png"
+
+/* Profile Images */
 import samank from '../images/samank.jpeg'
-import Tanay from '../images/tanay.jpeg'
+import tanay from '../images/tanay.jpeg'
+import sanika from '../images/sanika.jpg'
+import mainak from '../images/mainak.jpeg'
+import swapnal from '../images/Swapnal.jpeg'
+import tejas from '../images/tejas.jpeg'
+import gunja from '../images/gunja.jpg'
+import prathiba from '../images/prathiba.jpg'
+
 import Mountains from '../components/Mountains'
 
 const TeamMember = ({name,designation,profileLink}) =>{
@@ -45,7 +54,7 @@ const Team = () => {
                     <div className="grid justify-items-center lg:justify-items-start">
                         <div >
                             <div className="rounded-full overflow-hidden " id="metallic">
-                                <img  src={Tanay} className="h-48 lg:h-60" alt="Person"></img>
+                                <img  src={tanay} className="h-48 lg:h-60" alt="Person"></img>
                             </div>
                             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                                 <h1 className="font-medium text-xl text-black">Tanay Bhadula</h1>
@@ -56,24 +65,24 @@ const Team = () => {
                 </div>
                 <div className="grid lg:grid-cols-3 lg:gap-20 lg:my-24 grid-cols-1">
                     <div className="grid  justify-items-center lg:justify-items-end">
-                        <TeamMember name="Sanika Kulkarni" designation="General Secretary" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Sanika Kulkarni" designation="General Secretary" profileLink={sanika}/>
                     </div>
                     <div className="grid justify-items-center">
-                        <TeamMember name="Mainak Sengupta" designation="Technical Head" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Mainak Sengupta" designation="Technical Head" profileLink={mainak}/>
                     </div>
                     <div className="grid justify-items-center lg:justify-items-start">
-                        <TeamMember name="Swapnal Varma" designation="Joint General Secretary" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Swapnal Varma" designation="Joint General Secretary" profileLink={swapnal}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-20 lg:mb-24">
                     <div className="grid justify-items-center lg:justify-items-end ">
-                        <TeamMember name="Tejas Vaichole" designation="Design Head" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Tejas Vaichole" designation="Design Head" profileLink={tejas}/>
                     </div>
                     <div className="grid justify-items-center">
-                        <TeamMember name="Gunja Pandey" designation="Public Relations head" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Gunja Pandey" designation="Public Relations head" profileLink={gunja}/>
                     </div>
                     <div className="grid justify-items-center lg:justify-items-start ">
-                        <TeamMember name="Prathiba Narayan" designation="Design Head" profileLink="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"/>
+                        <TeamMember name="Prathiba Narayan" designation="Design Head" profileLink={prathiba}/>
                     </div>
                 </div>
             </div>
