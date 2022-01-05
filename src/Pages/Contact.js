@@ -9,15 +9,16 @@ import Mountains from "../components/Mountains";
 const Contact = () => {
     return (
         <div>
-            <div className="font-catamaran text-center my-5 text-black" id="outlinetext">
+             <div className="font-catamaran text-center my-5 col-span-2 text-black" id="outlinetext">
                 <h1>CONTACT US</h1>
             </div>
-            <div className="grid grid-cols-2 gap-2">
-                <div className="pb-16 mt-10">
-                    
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                <div className="mx-5 pb-16 lg:mt-10 ">
+                   
                     <div>
                         <div className="sm:ml-40 mt-6 sm:mr-24">
                             <div className="mt-5 md:mt-0 md:col-span-2 text-left">
+
                                 <form>
                                     <div className="sm:rounded-md">
 
@@ -30,7 +31,7 @@ const Contact = () => {
                                                 name="name"
                                                 id="name"
                                                 autoComplete="name"
-                                                className="mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md "
+                                                className="bg-gray-600  border-0 mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md "
                                             />
                                         </div><br />
                                         <div className="col-span-6">
@@ -42,7 +43,7 @@ const Contact = () => {
                                                 name="email"
                                                 id="email"
                                                 autoComplete="email"
-                                                className="mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                className="bg-gray-600 border-0 mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                             />
                                         </div><br />
                                         <div className="col-span-6">
@@ -54,7 +55,7 @@ const Contact = () => {
                                                 name="subject"
                                                 id="subject"
                                                 autoComplete="subject"
-                                                className="mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                className="bg-gray-600 border-0 mt-1 focus:ring-comsocgreen focus:border-comsocgreen block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                             />
                                         </div><br />
                                         <div className="space-y-6">
@@ -67,17 +68,17 @@ const Contact = () => {
                                                         id="message"
                                                         name="message"
                                                         rows={3}
-                                                        className="shadow-sm focus:ring-comsocgreen focus:border-comsocgreen mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                                                        className="bg-gray-600 border-0 shadow-sm focus:ring-comsocgreen focus:border-comsocgreen mt-1 block w-full sm:text-sm rounded-md"
 
                                                     />
                                                 </div>
 
                                             </div>
                                         </div><br />
-                                        <div className="text-right">
+                                        <div className="text-center">
                                             <button
                                                 type="submit"
-                                                className="inline-flex justify-center py-2 w-full px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-comsocgreen hover:bg-comsocgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-comsocgreen"
+                                                className="font-sans bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2  px-8 border border-transparent shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-comsocgreen"
                                             >
                                                 Submit
                                             </button>
@@ -88,8 +89,8 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className='relative'>
-                   <img src={asteroid} alt="asteroid" style={{top:"-100px"}} />
+                <div className='hidden lg:block ml-32'>
+                   <img src={asteroid} alt="asteroid" />
                 </div>
             </div>
             <Mountains />
