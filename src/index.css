@@ -21,7 +21,7 @@ code {
 }
 
 #outlinetext{
-  background: -webkit-linear-gradient(-45deg, #16C79E, #C5DA45);
+  background: -webkit-linear-gradient(-45deg, #16C79E, #C5DA45 70%);
   background-clip: padding-box;
   padding: 12px;
   -webkit-background-clip: text;
@@ -57,6 +57,24 @@ code {
   margin-right: 27rem;
 }
 
+#carousel{
+  max-height: 45rem;
+}
+.slick-dots{
+  bottom: 40px !important;
+  z-index: 20;
+}
+.projectcarousel .slick-dots{
+  bottom: -80px !important;
+  z-index: 20;
+}
+.slick-dots li{
+  opacity: 0.4;
+}
+.slick-dots .slick-active,.slick-dots li:hover{
+  opacity: 1;
+}
+
 @media only screen and (max-width: 640px) {
   #outlinetext{
     font-size: 60px;
@@ -66,5 +84,18 @@ code {
   }
   #newsletterline{
     margin-right: 4rem;
+  }
+  .slick-dots{
+    bottom: 150px !important;
+  }
+}
+
+@media (min-width: 640px) { 
+  #carouselcard{
+    height: 38rem;
+    box-shadow: -40px 25px 50px 6px rgb(0 0 0/0.8)
+  }
+  #carousel{
+    max-height: 40rem;
   }
 }
