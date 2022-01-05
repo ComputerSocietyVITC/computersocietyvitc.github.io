@@ -32,6 +32,16 @@ code {
   letter-spacing: 0.02em;
 }
 
+#metallic{
+  
+  border-image: -webkit-linear-gradient(-45deg, #474747, #c0c0bd); 
+  border: 20px solid #364347;
+}
+
+#designation-bg{
+  background: linear-gradient(45deg, #10aa6a, #dbfaa8);
+}
+
 #flip{
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
