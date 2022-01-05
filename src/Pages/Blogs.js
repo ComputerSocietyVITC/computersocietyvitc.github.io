@@ -1,31 +1,73 @@
-import React from 'react'
-import blogging from "../images/blogging.png";
+import React, { useState,useEffect } from 'react'
 import Mountains from "../components/Mountains";
-
-//import down from "../images/down.png"
-
-const Blogs = () => {
+import blog from "../images/blog.png";
+const Article = (props) => {
+  const {author, date, title, url, img} = props;
   return (
-    <div className="h-full pt-32">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="sm:ml-40 mt-44">
-          <h1 className="text-6xl text-left"><span className="text-comsocgreen">Our</span> Blogs</h1>
-          <p className="text-2xl text-left mt-6">Coming Soon...</p>
+      <a href={url}>
+        <div className="bg-white rounded-3xl row-span-1 w-45">
+            <div className="rounded-t-3xl w-45 h-25 overflow-hidden"><img class="object-contain" src={img} alt=""/></div>
+            <div className="w-45 p-4">
+                <p class="font-bold text-black">{title}</p>
+                <p class="text-black">{author}</p>
+                <p class="text-gray-500 text-xs">{date}</p>
+            </div>
         </div>
-        <div>
-          <img src={blogging} className="ml-32 w-4/6 pt-20" alt="Events Image"></img>
-        </div>
+      </a>
+  )
+};
+const Blogs = () => {
+  const [articles, setArticles] = useState([]);
+  const fetchArticles = (username) => {
+    let url = "https://dev.to/api/articles?username=" + username;
+    fetch(url)
+      .then((res) => res.json())
+      .then((result) => {
+        const articleData = result.map((item) => {
+          return {
+            id: item.id,
+            author:item.user.name,
+            url: item.url,
+            imgSrc: item.social_image,
+            title: item.title,
+            publishedDate: item.readable_publish_date
+          };
+        });
+        setArticles (articleData);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+      fetchArticles("ieeecsvitc");
+  }, ["ieeecsvitc"]);
+  return (
+      <div>
+          <div className="font-catamaran text-left my-5 ml-28 text-black" id="outlinetext">
+              <h1>OUR BLOGS</h1>
+          </div>
+          <div className="m-auto mb-24 flex">
+            <div className="mt-20 ml-32 w-3/5"><p className="text-left text-2xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis alias nemo, corrupti recusandae pariatur dicta quam culpa ad, fugiat quisquam harum? Animi ex natus repellendus beatae totam. Placeat magnam delectus, iste architecto perspiciatis maiores iure totam tempore aperiam corrupti quos temporibus error expedita optio molestiae corporis possimus rem doloremque voluptatibus.</p></div> 
+            <div className=" m-auto -mt-32 -mr-10 content-center overflow-hidden"><img className="object-cover" src={blog} alt="" /></div>
+          </div>
+          <p className="font-bold text-3xl">Check out our Blogs</p>
+          <div className="w-3/5 m-auto mt-10 grid grid-cols-3 grid-flow-cols gap-6">
+            {
+              articles.map((article) =>(<Article author= {article.author} date={article.publishedDate} title={article.title} url={article.url} img={article.imgSrc} />))
+            }
+            {
+              articles.map((article) =>(<Article author= {article.author} date={article.publishedDate} title={article.title} url={article.url} img={article.imgSrc}  />))
+            }
+            {
+              articles.map((article) =>(<Article author= {article.author} date={article.publishedDate} title={article.title} url={article.url} img={article.imgSrc}  />))
+            }
+            {
+              articles.map((article) =>(<Article author= {article.author} date={article.publishedDate} title={article.title} url={article.url} img={article.imgSrc}  />))
+            }
+          </div>
+          <Mountains />
       </div>
-      {/* <div className="flex justify-center mt-16">
-        <img
-          onClick={() => prRef.current.scrollIntoView({ behavior: "smooth" })}
-          src={down}
-          alt="down arrow"
-          className="w-12 h-12 items-center m-4"
-        />
-      </div> */}
-      <Mountains />
-    </div>
   )
 }
 
