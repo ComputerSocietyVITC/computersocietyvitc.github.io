@@ -23,7 +23,6 @@ const Home = () => {
   const handleVisibleButton = () => {
     const position = window.pageYOffset;
 
-    console.log(position)
     if (position > 400) {
       return setVisible("goTop");
     } else {
