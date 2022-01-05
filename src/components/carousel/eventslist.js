@@ -59,7 +59,6 @@ const eventslist = [
 
     },
 
-
     {
         "serial_no": 6,
         "event": "DataHub 2.0",
