@@ -1,15 +1,11 @@
 import React from 'react'
-import instagram from '../images/socialmedia/instagram.png'
-import github from '../images/socialmedia/github.png'
-import linkedin from '../images/socialmedia/linkedin.png'
-import discord from '../images/socialmedia/discord.png'
 import asteroid from "../images/asteroid.png";
 import Mountains from "../components/Mountains";
 
 const Contact = () => {
     return (
         <div>
-             <div className="font-catamaran text-center lg:text-left my-5 lg:ml-28 text-black" id="outlinetext">
+             <div className="font-catamaran text-center mt-10 mb-2 lg:text-left lg:ml-28 text-black" id="outlinetext">
                 <h1>CONTACT US</h1>
             </div>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">

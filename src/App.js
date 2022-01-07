@@ -1,7 +1,7 @@
 import "./App.css";
 import "./stars.sass";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -17,7 +17,6 @@ import Team from './Pages/Team.js'
 import Blogs from './Pages/Blogs.js'
 import Contact from './Pages/Contact.js'
 import Error from './Pages/Error.js'
-import Mountains from "./components/Mountains";
 
 function App() {
 

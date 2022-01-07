@@ -44,7 +44,7 @@ const Blogs = () => {
   }, ["ieeecsvitc"]);
   return (
       <div>
-          <div className="font-catamaran text-center lg:text-left my-5 lg:ml-28 text-black" id="outlinetext">
+          <div className="font-catamaran text-center mt-10 mb-2 lg:text-left lg:ml-28 text-black" id="outlinetext">
               <h1>OUR BLOGS</h1>
           </div>
           <div className="m-auto mb-24 flex">
