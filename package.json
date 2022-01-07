@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@supabase/supabase-js": "^1.29.1",
     "@tailwindcss/forms": "^0.3.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -16,6 +17,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
+    "react-toastify": "^8.1.0",
     "slick-carousel": "^1.8.1",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.1.2"

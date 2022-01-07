@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import Mountains from "../components/Mountains";
+import { supabase } from '../supabaseClient'
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
 
   const [visible, setVisible] = useState(false)
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
     window.onscroll = () => {
@@ -30,8 +33,27 @@ const Home = () => {
     }
   };
 
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    document.getElementById("newsletterform").reset();
+    const { data, error } = await supabase
+      .from('Newsletter')
+      .insert([
+        { email: email }
+      ])
+    if (data) {
+      toast.success("Email ID Submitted!", {
+        theme: "dark"
+      })
+    }
+  }
+
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+      />
       <div>
         <div onClick={handleScrollUp} className={"bottom-12 right-14 fixed z-20" + (visible === "goTop" ? " block" : " hidden")}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="#29DB9B">
@@ -93,16 +115,20 @@ const Home = () => {
               Want to stay updated with the latest news about IEEE CS VITC? Enter you email address and allow notifications.
             </p>
           </div>
-          <div>
-            <input
-              className="mt-12 pl-8 bg-gray-800 backdrop-opacity-20 lg:w-1/2 h-16 lg:h-20 rounded-3xl border-0 text-2xl lg:text-3xl"
-              placeholder="Enter your email"
-              type="text"
-            />
-          </div>
-          <div className="bg-gradient-to-r from-color1 to-color2 px-12 py-4 ml-auto mr-auto mt-16 text-2xl lg:text-4xl text-white w-4/5 lg:w-1/4 shadow-xl hover:shadow-md hover:from-comsocgreen" style={{ borderRadius: "50px" }}>
-            <Link to="/">Subscribe</Link>
-          </div>
+          <form onSubmit={submitEmail} id="newsletterform">
+            <div>
+              <input
+                className="mt-12 pl-8 bg-gray-800 backdrop-opacity-20 lg:w-1/2 h-16 lg:h-20 rounded-3xl border-0 text-2xl lg:text-3xl"
+                placeholder="Enter your email"
+                type="email"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="bg-gradient-to-r from-color1 to-color2 px-12 py-4 ml-auto mr-auto mt-16 text-2xl lg:text-4xl text-white w-4/5 lg:w-1/4 shadow-xl hover:shadow-md hover:from-comsocgreen" style={{ borderRadius: "50px" }}>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
         </div>
       </div>
       <Mountains />
