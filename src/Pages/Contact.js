@@ -9,14 +9,14 @@ import Mountains from "../components/Mountains";
 const Contact = () => {
     return (
         <div>
-             <div className="font-catamaran text-center my-5 col-span-2 text-black" id="outlinetext">
+             <div className="font-catamaran text-center lg:text-left my-5 lg:ml-28 text-black" id="outlinetext">
                 <h1>CONTACT US</h1>
             </div>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-                <div className="mx-5 pb-16 lg:mt-10 ">
+                <div className="mx-5 pb-16 lg:mt-6 ">
                    
                     <div>
-                        <div className="sm:ml-40 mt-6 sm:mr-24">
+                        <div className="sm:ml-40 sm:mr-24">
                             <div className="mt-5 md:mt-0 md:col-span-2 text-left">
 
                                 <form>
@@ -89,7 +89,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className='hidden lg:block ml-32'>
+                <div className='hidden lg:block ml-32 -mt-24'>
                    <img src={asteroid} alt="asteroid" />
                 </div>
             </div>

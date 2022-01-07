@@ -1,8 +1,5 @@
 import React, { useRef } from 'react'
 
-import teamimage from "../images/teamimage.png"
-import down from "../images/down.png"
-
 /* Profile Images */
 import samank from '../images/samank.jpeg'
 import tanay from '../images/tanay.jpeg'

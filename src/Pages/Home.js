@@ -70,7 +70,9 @@ const Home = () => {
           About Us
           <div class="h-3 w-28 rounded-md ml-auto bg-gradient-to-r from-color1 to-color2"></div>
           <h1 className="font-montserrat text-2xl lg:text-4xl text-white my-16 lg:my-24 lg:ml-36 lg:leading-custom">
-            At IEEE Computer Society VIT Chennai, our aim is to learn and teach. Developers, designers and managers come together under one roof to create a community which inspires thousands. Join Us!
+            IEEE Computer Society VIT Chennai is a zealous community of diverse minds striving to Learn, Create, (sometimes Break!), Develop, and Explore.
+Here we combine an infectious desire to grow together, and a stubborn persistence to keep going, with a healthy ambition for the next audacious challenge.
+Come join us on this journey!
           </h1>
         </div>
       </div>
