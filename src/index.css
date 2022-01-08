@@ -53,10 +53,6 @@ code {
   border-radius: 50px;
 }
 
-#newsletterline{
-  margin-right: 27rem;
-}
-
 #carousel{
   max-height: 45rem;
 }
@@ -81,9 +77,6 @@ code {
     line-height: 60px;
     padding: 8px;
     -webkit-text-stroke: 5px transparent;
-  }
-  #newsletterline{
-    margin-right: 4rem;
   }
   .slick-dots{
     bottom: 150px !important;
