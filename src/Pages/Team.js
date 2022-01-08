@@ -14,6 +14,7 @@ import comsocLogowhite from '../images/comsocLogowhite.png'
 
 import Mountains from '../components/Mountains'
 import OBList from '../components/bookdata/OBList';
+import MembersList from '../components/bookdata/MembersList';
 
 const TeamMember = ({ name, designation, profileLink }) => {
     return (
@@ -48,6 +49,20 @@ const Page = ({ year, members }) => {
                 <div className='text-3xl text-comsocgreen py-8'>{year}</div>
                 {members ? members.map(mem => (
                     <p className='text-xl p-1'>{mem.Name} ({mem.Designation})</p>
+                ))
+                    : ''}
+            </div>
+        </div>
+    )
+};
+
+const MemberPage = ({ members }) => {
+    return (
+        <div className="w-full h-full bg-bgcolor1 border-2 border-black">
+            <div>
+                <div className='text-3xl text-comsocgreen py-8'>2021 - 2022</div>
+                {members ? members.map(mem => (
+                    <p className='text-xl p-1'>{mem.Name} ({mem.Reg_No})</p>
                 ))
                     : ''}
             </div>
@@ -121,35 +136,38 @@ const Team = () => {
                     Members List
                 </button>
             </div>
-            <div className='relative'>
-                <div className='h-screen w-screen bg-transparent z-10'>
-                    <div className={'h-full w-full bg-black bg-opacity-80 z-20 absolute top-0' + (modalDisplay ? " block" : " hidden")}>
-                        <div className="w-1/2 relative top-28 mx-auto">
-                            <HTMLFlipBook
-                                width={340}
-                                height={500}
-                            >
+            <div className={'h-screen w-screen bg-transparent z-10 absolute' + (modalDisplay ? " block" : " hidden")}>
+                <div className='h-full w-full bg-black bg-opacity-80 z-20 fixed top-0'>
+                    <div className="w-1/2 relative top-28 mx-auto">
+                        <HTMLFlipBook
+                            width={340}
+                            height={500}
+                        >
+                            <div className='w-full h-full'>
+                                <PageCover text="Members List" />
+                            </div>
+                            {OBList.map(ob =>
                                 <div className='w-full h-full'>
-                                    <PageCover text="Members List" />
+                                    <Page year={ob.Year} members={ob.Members} />
                                 </div>
-                                {OBList.map(ob =>
-                                    <div className='w-full h-full'>
-                                        <Page year={ob.Year} members={ob.Members} />
-                                    </div>
-                                )}
+                            )}
+                            {MembersList.map(mem =>
                                 <div className='w-full h-full'>
-                                    <PageCover text="To be continued..." />
+                                    <MemberPage members={mem.PageList} />
                                 </div>
-                            </HTMLFlipBook>
-                        </div>
-                        <div className='z-20 relative -bottom-44 text-center'>
-                            <button
-                                onClick={() => setModalDisplay(false)}
-                                className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
-                            >
-                                Close List
-                            </button>
-                        </div>
+                            )}
+                            <div className='w-full h-full'>
+                                <PageCover text="To be continued..." />
+                            </div>
+                        </HTMLFlipBook>
+                    </div>
+                    <div className='z-20 relative -bottom-44 text-center'>
+                        <button
+                            onClick={() => setModalDisplay(false)}
+                            className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
+                        >
+                            Close List
+                        </button>
                     </div>
                 </div>
             </div>
