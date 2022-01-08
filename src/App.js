@@ -3,8 +3,6 @@ import "./stars.sass";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 // Import Components
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
@@ -19,14 +17,6 @@ import Contact from './Pages/Contact.js'
 import Error from './Pages/Error.js'
 
 function App() {
-
-  React.useEffect(() => {
-    Aos.init({
-      once: true,
-      duration: 500,
-      easing: 'ease-out-cubic',
-    })
-  }, [])
 
   return (
     <div className="App">

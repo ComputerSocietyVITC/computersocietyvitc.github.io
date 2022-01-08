@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React from 'react'
+import HTMLFlipBook from 'react-pageflip';
 
 /* Profile Images */
 import samank from '../images/samank.jpeg'
@@ -9,8 +10,10 @@ import swapnal from '../images/Swapnal.jpeg'
 import tejas from '../images/tejas.jpeg'
 import gunja from '../images/gunja.jpg'
 import prathiba from '../images/prathiba.jpg'
+import comsocLogowhite from '../images/comsocLogowhite.png'
 
 import Mountains from '../components/Mountains'
+import OBList from '../components/bookdata/OBList';
 
 const TeamMember = ({ name, designation, profileLink }) => {
     return (
@@ -26,9 +29,36 @@ const TeamMember = ({ name, designation, profileLink }) => {
     )
 }
 
+
+const PageCover = ({ text }) => {
+    return (
+        <div className="w-full h-full font-sans bg-bgcolor1 border-2 border-black">
+            <div className='py-32'>
+                <img src={comsocLogowhite} alt="Comsoc logo" className='px-4' />
+                <h2 className='text-2xl mt-20 text-comsocgreen uppercase'>{text}</h2>
+            </div>
+        </div>
+    )
+};
+
+const Page = ({ year, members }) => {
+    return (
+        <div className="w-full h-full bg-bgcolor1 border-2 border-black">
+            <div>
+                <div className='text-3xl text-comsocgreen py-8'>{year}</div>
+                {members ? members.map(mem => (
+                    <p className='text-xl p-1'>{mem.Name} ({mem.Designation})</p>
+                ))
+                    : ''}
+            </div>
+        </div>
+    )
+};
+
+
 const Team = () => {
 
-    const obRef = useRef(null)
+    const [modalDisplay, setModalDisplay] = React.useState(false)
 
     return (
         <div className='relative z-10'>
@@ -83,8 +113,48 @@ const Team = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-center">
+                <button
+                    onClick={() => setModalDisplay(true)}
+                    className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
+                >
+                    Members List
+                </button>
+            </div>
+            <div className='relative'>
+                <div className='h-screen w-screen bg-transparent z-10'>
+                    <div className={'h-full w-full bg-black bg-opacity-80 z-20 absolute top-0' + (modalDisplay ? " block" : " hidden")}>
+                        <div className="w-1/2 relative top-28 mx-auto">
+                            <HTMLFlipBook
+                                width={340}
+                                height={500}
+                            >
+                                <div className='w-full h-full'>
+                                    <PageCover text="Members List" />
+                                </div>
+                                {OBList.map(ob =>
+                                    <div className='w-full h-full'>
+                                        <Page year={ob.Year} members={ob.Members} />
+                                    </div>
+                                )}
+                                <div className='w-full h-full'>
+                                    <PageCover text="To be continued..." />
+                                </div>
+                            </HTMLFlipBook>
+                        </div>
+                        <div className='z-20 relative -bottom-44 text-center'>
+                            <button
+                                onClick={() => setModalDisplay(false)}
+                                className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
+                            >
+                                Close List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Mountains />
-        </div>
+        </div >
     )
 }
 
