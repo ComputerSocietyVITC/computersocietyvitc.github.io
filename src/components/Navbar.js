@@ -20,6 +20,10 @@ export default function Navbar(props) {
     else
       setPageSelected({ ...pageSelected, [pageName]: true })
   }, [])
+  React.useEffect(() => {
+    if (navbarOpen)
+      setNavbarOpen(!navbarOpen)
+  }, [pageSelected])
 
   let pageSelectedStyle = { borderBottom: "2.2px solid #29DB9B", textUnderlinePosition: "under" }
 

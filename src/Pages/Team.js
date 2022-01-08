@@ -12,11 +12,11 @@ import prathiba from '../images/prathiba.jpg'
 
 import Mountains from '../components/Mountains'
 
-const TeamMember = ({name,designation,profileLink}) =>{
-    return(
+const TeamMember = ({ name, designation, profileLink }) => {
+    return (
         <div>
             <div className="rounded-full overflow-hidden " id="metallic">
-                <img  src={profileLink} className="h-48" alt="Person"></img>
+                <img src={profileLink} className="h-48" alt="Person"></img>
             </div>
             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                 <h1 className="font-medium text-xl text-black">{name}</h1>
@@ -31,7 +31,7 @@ const Team = () => {
     const obRef = useRef(null)
 
     return (
-        <div>
+        <div className='relative z-10'>
             <div className="font-catamaran text-center my-10 text-black" id="outlinetext">
                 <h1>MEET THE TEAM</h1>
             </div>
@@ -40,7 +40,7 @@ const Team = () => {
                     <div className="grid justify-items-center lg:justify-items-end">
                         <div >
                             <div className="rounded-full overflow-hidden " id="metallic">
-                                <img  src={samank} className="h-48 lg:h-60" alt="Person"></img>
+                                <img src={samank} className="h-48 lg:h-60" alt="Person"></img>
                             </div>
                             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                                 <h1 className="font-medium text-xl text-black">Samank Gupta</h1>
@@ -51,7 +51,7 @@ const Team = () => {
                     <div className="grid justify-items-center lg:justify-items-start">
                         <div >
                             <div className="rounded-full overflow-hidden " id="metallic">
-                                <img  src={tanay} className="h-48 lg:h-60" alt="Person"></img>
+                                <img src={tanay} className="h-48 lg:h-60" alt="Person"></img>
                             </div>
                             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                                 <h1 className="font-medium text-xl text-black">Tanay Bhadula</h1>
@@ -62,24 +62,24 @@ const Team = () => {
                 </div>
                 <div className="grid lg:grid-cols-3 lg:gap-20 lg:my-24 grid-cols-1">
                     <div className="grid  justify-items-center lg:justify-items-end">
-                        <TeamMember name="Sanika Kulkarni" designation="General Secretary" profileLink={sanika}/>
+                        <TeamMember name="Sanika Kulkarni" designation="General Secretary" profileLink={sanika} />
                     </div>
                     <div className="grid justify-items-center">
-                        <TeamMember name="Mainak Sengupta" designation="Technical Head" profileLink={mainak}/>
+                        <TeamMember name="Mainak Sengupta" designation="Technical Head" profileLink={mainak} />
                     </div>
                     <div className="grid justify-items-center lg:justify-items-start">
-                        <TeamMember name="Swapnal Varma" designation="Joint General Secretary" profileLink={swapnal}/>
+                        <TeamMember name="Swapnal Varma" designation="Joint General Secretary" profileLink={swapnal} />
                     </div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-20 lg:mb-24">
                     <div className="grid justify-items-center lg:justify-items-end ">
-                        <TeamMember name="Tejas Vaichole" designation="Design Head" profileLink={tejas}/>
+                        <TeamMember name="Tejas Vaichole" designation="Design Head" profileLink={tejas} />
                     </div>
                     <div className="grid justify-items-center">
-                        <TeamMember name="Gunja Pandey" designation="Public Relations head" profileLink={gunja}/>
+                        <TeamMember name="Gunja Pandey" designation="Public Relations head" profileLink={gunja} />
                     </div>
                     <div className="grid justify-items-center lg:justify-items-start ">
-                        <TeamMember name="Prathiba Narayan" designation="Design Head" profileLink={prathiba}/>
+                        <TeamMember name="Prathiba Narayan" designation="Design Head" profileLink={prathiba} />
                     </div>
                 </div>
             </div>
