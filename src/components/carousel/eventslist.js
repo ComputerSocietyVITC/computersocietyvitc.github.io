@@ -4,7 +4,7 @@ const eventslist = [
         "event": "HackHub",
         "date": "29-30 Mar 2019",
         "description": "HackHub was a 2-day hackathon hosted by IEEE Computer Society. HackHub attracted a large number of students from various institutions around the country. There were a plethora of domains like Robotics, Internet of Things, Embedded System, Machine Learning and Artificial Intelligence. It was sposored by Euro Exim Bank and had a prize pool of 1,00,000/- INR.",
-        "image": "https://i.imgur.com/bbtlPOd.jpg",
+        "image": "https://i.imgur.com/LmUMGZS.jpg",
         "url": " ",
         "event_mode": "Offline",
         "type": "Annual"
@@ -40,7 +40,7 @@ const eventslist = [
         "event": "Paradox",
         "date": "10-11 Apr 2021",
         "description": "PARADOX was a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer.",
-        "image": "https://i.imgur.com/vkpTnop.png",
+        "image": "https://i.imgur.com/CqJs57W.jpg",
         "url": "https://paradox21.tech/",
         "event_mode": "Online",
         "type": "Annual"
