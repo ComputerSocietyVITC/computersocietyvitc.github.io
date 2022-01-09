@@ -12,7 +12,7 @@ import devto from '../images/socialmedia/devto.png'
 const Footer = () => {
 
     return (
-        <div>
+        <div className='relative z-10'>
             <footer className="bg-gradient-to-b from-bgcolor3 to-black font-montserrat">
                 <div className="pb-6 text-gray-800 flex flex-wrap justify-left text-left">
                     <div className="pt-8 md:pt-4 w-11/12 mx-auto md:mx-0 md:w-3/12 order-4 md:order-1">

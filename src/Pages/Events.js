@@ -63,7 +63,7 @@ const Events = () => {
                                                 <div className='ml-auto md:h-2/3 md:mt-16'>
                                                     <img src={event.image} alt={event.event} className='w-full h-full' />
                                                 </div>
-                                                <div className='text-lg md:text-2xl font-medium text-justify md:mr-20 p-3 py-6 md:p-16 md:pb-0 bg-bgcolor1' id='carouselcard'>
+                                                <div className='overflow-auto text-lg md:text-2xl font-medium text-justify md:mr-20 p-3 py-6 md:p-16 md:pb-0 bg-bgcolor1' id='carouselcard'>
                                                     <h1 className='text-4xl md:text-6xl uppercase font-semibold mb-6 md:mb-10'>{event.event}</h1>
                                                     <span className='text-xl md:text-2xl font-medium text-comsocgreen'>{event.date}</span>
                                                     <br /><br />

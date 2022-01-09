@@ -87,6 +87,8 @@ const Team = () => {
     }, [])
 
     const setBookAlignment = e => {
+        console.log(e)
+        // e.data.mode = "landscape";
         e.object.render.boundsRect.top = 0;
         e.object.render.boundsRect.left = 0;
     }
@@ -146,7 +148,7 @@ const Team = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center mt-12 md:mt-0">
                         <button
                             onClick={() => setModalDisplay(true)}
                             className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
@@ -156,7 +158,7 @@ const Team = () => {
                     </div>
                     <div className={'h-screen w-screen bg-transparent z-10 absolute' + (modalDisplay ? " block" : " hidden")}>
                         <div className='h-full w-full bg-black bg-opacity-80 z-20 fixed top-0'>
-                            <div className="w-1/2 relative top-28 mx-auto">
+                            <div className="w-full md:w-1/2 relative top-28 mx-auto">
                                 <HTMLFlipBook
                                     width={340}
                                     height={500}
