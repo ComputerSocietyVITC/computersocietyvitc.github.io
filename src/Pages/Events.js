@@ -15,6 +15,9 @@ const Events = () => {
         setLoading(false)
         }, 1000)
     },[])
+    useEffect(() => {
+        document.getElementById("starrybg").style.background = "linear-gradient(180deg, rgba(23, 23, 23, 0) 6.68%, rgba(52, 80, 154, 0.29) 64.84%, rgba(151, 169, 204, 0.439818) 81.37%, rgba(255, 255, 255, 0.45) 98.87%)";
+    },[])
     const [sliderRef, setSliderRef] = useState(null)
 
     const sliderSettings = {
