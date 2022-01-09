@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 import Mountains from "../components/Mountains";
 import projectslists from '../components/carousel/projectslists';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Loader from "../components/loader/Loader";
 
 const Projects = () => {
-
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+        setLoading(false)
+        }, 1000)
+    },[])
     const [sliderRef, setSliderRef] = useState(null)
 
     const sliderSettings = {
@@ -26,44 +33,50 @@ const Projects = () => {
 
     return (
         <div>
-            <div className="font-catamaran text-center my-10 text-black" id="outlinetext">
-                <h1>PROJECTS</h1>
-            </div>
+            { loading ? <Loader/> : 
+            (
             <div>
-                <div className='relative z-10'>
-                    <button onClick={sliderRef?.slickPrev} className='absolute left-2 md:left-16 top-80'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button onClick={sliderRef?.slickNext} className='absolute right-2 md:right-16 top-80'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                <div className="font-catamaran text-center my-10 text-black" id="outlinetext">
+                    <h1>PROJECTS</h1>
                 </div>
-                <div id="carousel" className='mb-20'>
-                    <Slider ref={setSliderRef} {...sliderSettings} className='mx-16 md:mx-28 projectcarousel'>
-                        {projectslists.map((proj) => (
-                            <div key={proj.serial_no}>
-                                <div className='md:my-6'>
-                                    <div className='grid grid-cols-1 md:grid-cols-2 md:mt-12'>
-                                        <div className='ml-auto md:h-2/3 md:mt-24'>
-                                            <img src={proj.image} alt={proj.project} className='w-full h-full' />
-                                        </div>
-                                        <div className='text-lg md:text-2xl font-medium text-justify md:mr-20 p-3 py-6 md:p-10 md:pb-0 bg-bgcolor1' id='carouselcard'>
-                                            <h1 className='text-3xl md:text-5xl text-left uppercase font-semibold mb-6 md:mb-10'>{proj.project}</h1>
-                                            {proj.description}
+                <div>
+                    <div className='relative z-10'>
+                        <button onClick={sliderRef?.slickPrev} className='absolute left-2 md:left-16 top-80'>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button onClick={sliderRef?.slickNext} className='absolute right-2 md:right-16 top-80'>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="carousel" className='mb-20'>
+                        <Slider ref={setSliderRef} {...sliderSettings} className='mx-16 md:mx-28 projectcarousel'>
+                            {projectslists.map((proj) => (
+                                <div key={proj.serial_no}>
+                                    <div className='md:my-6'>
+                                        <div className='grid grid-cols-1 md:grid-cols-2 md:mt-12'>
+                                            <div className='ml-auto md:h-2/3 md:mt-24'>
+                                                <img src={proj.image} alt={proj.project} className='w-full h-full' />
+                                            </div>
+                                            <div className='text-lg md:text-2xl font-medium text-justify md:mr-20 p-3 py-6 md:p-10 md:pb-0 bg-bgcolor1' id='carouselcard'>
+                                                <h1 className='text-3xl md:text-5xl text-left uppercase font-semibold mb-6 md:mb-10'>{proj.project}</h1>
+                                                {proj.description}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
-            </div>
 
-            <Mountains />
+                <Mountains />
+                </div>
+                )
+            }
         </div>
     )
 }

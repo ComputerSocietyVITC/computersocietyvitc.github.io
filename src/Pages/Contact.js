@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import asteroid from "../images/asteroid.png";
 import Mountains from "../components/Mountains";
 import { supabase } from '../supabaseClient'
 import { ToastContainer, toast } from 'react-toastify';
+import Loader from "../components/loader/Loader";
+
 
 const Contact = () => {
-
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+        setLoading(false)
+        }, 1000)
+    },[])
     const [contactData, setContactData] = React.useState({
         'Name': '',
         'Email': '',
@@ -27,7 +35,9 @@ const Contact = () => {
     }
 
     return (
-        <div className='relative z-10'>
+        <div>
+            {loading ? (<Loader/>) : 
+            (<div className='relative z-10'>
             <ToastContainer
                 position="top-right"
                 autoClose={2500}
@@ -123,7 +133,9 @@ const Contact = () => {
                 </div>
             </div>
             <Mountains />
-        </div >
+        </div >)}
+    </div>
+        
     )
 }
 
