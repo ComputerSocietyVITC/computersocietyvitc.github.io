@@ -3,8 +3,6 @@ import "./stars.sass";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 // Import Components
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
@@ -20,48 +18,48 @@ import Error from './Pages/Error.js'
 
 function App() {
 
-  React.useEffect(() => {
-    Aos.init({
-      once: true,
-      duration: 500,
-      easing: 'ease-out-cubic',
-    })
-  }, [])
+  const RouteWithNavBarFooter = ({ children }) => (
+    <Route>
+      <Navbar />
+      {children}
+      <Footer />
+    </Route>
+  )
 
   return (
     <div className="App">
       <div className="bg-black text-white min-h-screen">
         <Router>
-          <Navbar />
+          {/* <Navbar /> */}
           <div id="starrybg">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
             <Switch>
-              <Route exact path="/">
+              <RouteWithNavBarFooter exact path="/">
                 <Home />
-              </Route>
-              <Route exact path="/Projects">
+              </RouteWithNavBarFooter>
+              <RouteWithNavBarFooter exact path="/Projects">
                 <Projects />
-              </Route>
-              <Route exact path="/Events">
+              </RouteWithNavBarFooter>
+              <RouteWithNavBarFooter exact path="/Events">
                 <Events />
-              </Route>
-              <Route exact path="/Blogs">
+              </RouteWithNavBarFooter>
+              <RouteWithNavBarFooter exact path="/Blogs">
                 <Blogs />
-              </Route>
-              <Route exact path="/Team">
+              </RouteWithNavBarFooter>
+              <RouteWithNavBarFooter exact path="/Team">
                 <Team />
-              </Route>
-              <Route exact path="/Contact">
+              </RouteWithNavBarFooter>
+              <RouteWithNavBarFooter exact path="/Contact">
                 <Contact />
-              </Route>
+              </RouteWithNavBarFooter>
               <Route exact path="*">
                 <Error />
               </Route>
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </div>
     </div>

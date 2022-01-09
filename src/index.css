@@ -20,12 +20,12 @@ code {
     monospace;
 }
 
-#outlinetext{
+#outlinetext {
   background: -webkit-linear-gradient(-45deg, #16C79E, #C5DA45 70%);
   background-clip: padding-box;
   padding: 12px;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 6px transparent;  
+  -webkit-text-stroke: 6px transparent;
   font-weight: 900;
   font-size: 100px;
   line-height: 100px;
@@ -34,63 +34,74 @@ code {
 
 
 
-#metallic{
-  
-  border-image: -webkit-linear-gradient(-45deg, #474747, #c0c0bd); 
+#metallic {
+
+  border-image: -webkit-linear-gradient(-45deg, #474747, #c0c0bd);
   border: 20px solid #364347;
 }
 
-#designation-bg{
+#designation-bg {
   background: linear-gradient(45deg, #10aa6a, #dbfaa8);
 }
 
-#flip{
+#flip {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-#underlineGradient{
+#underlineGradient {
   height: 1px;
   background: linear-gradient(90deg, #16C79E 2.29%, #C5DA45 98.62%);
   border-radius: 50px;
 }
 
-#carousel{
-  max-height: 45rem;
+#carouselcard {
+  height: 38rem;
+  box-shadow: -40px 25px 50px 6px rgb(0 0 0/0.8)
 }
-.slick-dots{
+
+#carousel {
+  max-height: 40rem;
+}
+
+.slick-dots {
   bottom: 40px !important;
   z-index: 20;
 }
-.projectcarousel .slick-dots{
+
+.projectcarousel .slick-dots {
   bottom: -80px !important;
   z-index: 20;
 }
-.slick-dots li{
+
+.slick-dots li {
   opacity: 0.4;
 }
-.slick-dots .slick-active,.slick-dots li:hover{
+
+.slick-dots .slick-active,
+.slick-dots li:hover {
   opacity: 1;
 }
 
-@media only screen and (max-width: 640px) {
-  #outlinetext{
+@media only screen and (max-width: 768px) {
+  #outlinetext {
     font-size: 60px;
     line-height: 60px;
     padding: 8px;
     -webkit-text-stroke: 5px transparent;
   }
-  .slick-dots{
-    bottom: 150px !important;
-  }
-}
 
-@media (min-width: 640px) { 
-  #carouselcard{
-    height: 38rem;
-    box-shadow: -40px 25px 50px 6px rgb(0 0 0/0.8)
+  #carouselcard {
+    height: 27rem;
+    box-shadow: -10px 5px 50px 1px rgb(0 0 0/0.8)
   }
-  #carousel{
-    max-height: 40rem;
+
+  .projectcarousel #carouselcard {
+    height: 32rem;
+    box-shadow: -10px 5px 50px 1px rgb(0 0 0/0.8)
+  }
+
+  .slick-dots {
+    bottom: -65px !important;
   }
 }
