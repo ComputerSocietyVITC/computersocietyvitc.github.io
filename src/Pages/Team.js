@@ -85,7 +85,11 @@ const Team = () => {
     useEffect(() => {
         document.getElementById("starrybg").style.background = "linear-gradient(180deg, rgba(23, 23, 23, 0) 6.68%, rgba(52, 80, 154, 0.29) 64.84%, rgba(151, 169, 204, 0.439818) 81.37%, rgba(255, 255, 255, 0.45) 98.87%)";
     }, [])
-    const obRef = useRef(null)
+
+    const setBookAlignment = e => {
+        e.object.render.boundsRect.top = 0;
+        e.object.render.boundsRect.left = 0;
+    }
 
     return (
         <div>
@@ -156,6 +160,8 @@ const Team = () => {
                                 <HTMLFlipBook
                                     width={340}
                                     height={500}
+                                    usePortrait={false}
+                                    onInit={(e) => setBookAlignment(e)}
                                 >
                                     <div className='w-full h-full'>
                                         <PageCover text="Members List" />
