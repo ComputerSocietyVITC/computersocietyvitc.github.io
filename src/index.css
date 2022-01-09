@@ -83,7 +83,7 @@ code {
   opacity: 1;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   #outlinetext {
     font-size: 60px;
     line-height: 60px;

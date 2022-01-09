@@ -55,7 +55,7 @@ const Projects = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div id="carousel" className='mb-20'>
+                            <div id="carousel" className='mb-20 md:pl-16'>
                                 <Slider ref={setSliderRef} {...sliderSettings} className='mx-16 md:mx-28 projectcarousel'>
                                     {projectslists.map((proj) => (
                                         <div key={proj.serial_no}>
