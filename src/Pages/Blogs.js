@@ -61,10 +61,10 @@ const Blogs = () => {
         loading ?
           (<Loader />) :
           (<div className='relative z-10'>
-            <div className="font-catamaran text-center mt-10 mb-2 lg:text-left lg:ml-28 text-black" id="outlinetext">
+            <div className="font-catamaran text-center mt-10 mb-2 lg:text-center text-black" id="outlinetext">
               <h1>OUR BLOGS</h1>
             </div>
-            <div className="w-2/3 m-auto lg:w-full mt-16 lg:px-28 grid grid-cols-1 lg:grid-cols-2 grid-flow-cols gap-10 lg:gap-16">
+            <div className="w-2/3 m-auto lg:w-full mt-16 lg:px-28 grid grid-cols-1 lg:grid-cols-3 grid-flow-cols gap-10 lg:gap-16">
               {
                 articles.map((article) => (<Article author={article.author} date={article.publishedDate} title={article.title} url={article.url} img={article.imgSrc} />))
               }
