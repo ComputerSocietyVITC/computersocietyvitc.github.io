@@ -1,10 +1,10 @@
 import React from 'react'
 import './Loader.css'
-import ClipLoader from "react-spinners/FadeLoader";
+import RingLoader from "react-spinners/RingLoader";
 function Loader() {
     return (
         <div className="loader">
-            <ClipLoader color={"#29DB9B"} loading={true} size={50} />
+            <RingLoader color={"#29DB9B"} loading={true} size={100} />
         </div>
     )
 }
