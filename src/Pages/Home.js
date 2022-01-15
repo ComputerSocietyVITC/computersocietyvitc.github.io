@@ -140,7 +140,7 @@ const Home = () => {
               <form onSubmit={submitEmail} id="newsletterform">
                 <div>
                   <input
-                    className="mt-12 pl-8 bg-gray-800 backdrop-opacity-20 lg:w-1/2 h-16 lg:h-20 rounded-3xl border-0 text-2xl lg:text-3xl"
+                    className="mt-12 pl-8 bg-gray-900 backdrop-opacity-20 lg:w-1/2 h-16 lg:h-20 rounded-3xl border-0 text-2xl lg:text-3xl"
                     placeholder="Enter your email"
                     type="email"
                     required

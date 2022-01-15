@@ -45,18 +45,18 @@ const Projects = () => {
                         <div>
                             <div className='relative z-10'>
                                 <button onClick={sliderRef?.slickPrev} className='absolute left-2 md:left-16 top-80'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="md:h-12 md:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                     </svg>
                                 </button>
                                 <button onClick={sliderRef?.slickNext} className='absolute right-2 md:right-16 top-80'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="md:h-12 md:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
                             </div>
                             <div id="carousel" className='mb-20 md:pl-16'>
-                                <Slider ref={setSliderRef} {...sliderSettings} className='mx-16 md:mx-28 projectcarousel'>
+                                <Slider ref={setSliderRef} {...sliderSettings} className='mx-12 md:mx-28 projectcarousel'>
                                     {projectslists.map((proj) => (
                                         <div key={proj.serial_no}>
                                             <div className='md:my-6'>

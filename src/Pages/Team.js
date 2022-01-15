@@ -162,8 +162,8 @@ const Team = () => {
                                 <HTMLFlipBook
                                     width={340}
                                     height={500}
-                                    usePortrait={false}
-                                    onInit={(e) => setBookAlignment(e)}
+                                // usePortrait={false}
+                                // onInit={(e) => setBookAlignment(e)}
                                 >
                                     <div className='w-full h-full'>
                                         <PageCover text="Members List" />
