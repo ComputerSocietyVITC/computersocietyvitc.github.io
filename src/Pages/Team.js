@@ -1,5 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react'
-import HTMLFlipBook from 'react-pageflip';
+import React, { useState, useEffect } from 'react'
+
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import banner from '../images/banner.png'
 
 /* Profile Images */
 import samank from '../images/samank.jpeg'
@@ -10,7 +15,6 @@ import swapnal from '../images/Swapnal.jpeg'
 import tejas from '../images/tejas.jpeg'
 import gunja from '../images/gunja.jpg'
 import prathiba from '../images/prathiba.jpg'
-import comsocLogowhite from '../images/comsocLogowhite.png'
 
 import Mountains from '../components/Mountains'
 import OBList from '../components/bookdata/OBList';
@@ -31,49 +35,19 @@ const TeamMember = ({ name, designation, profileLink }) => {
     )
 }
 
-
-const PageCover = ({ text }) => {
-    return (
-        <div className="w-full h-full font-sans bg-bgcolor1 border-2 border-black">
-            <div className='py-32'>
-                <img src={comsocLogowhite} alt="Comsoc logo" className='px-4' />
-                <h2 className='text-2xl mt-20 text-comsocgreen uppercase'>{text}</h2>
-            </div>
-        </div>
-    )
-};
-
-const Page = ({ year, members }) => {
-    return (
-        <div className="w-full h-full bg-bgcolor1 border-2 border-black">
-            <div>
-                <div className='text-3xl text-comsocgreen py-8'>{year}</div>
-                {members ? members.map(mem => (
-                    <p className='text-xl p-1'>{mem.Name} ({mem.Designation})</p>
-                ))
-                    : ''}
-            </div>
-        </div>
-    )
-};
-
-const MemberPage = ({ members }) => {
-    return (
-        <div className="w-full h-full bg-bgcolor1 border-2 border-black">
-            <div>
-                <div className='text-3xl text-comsocgreen py-8'>2021 - 2022</div>
-                {members ? members.map(mem => (
-                    <p className='text-xl p-1'>{mem.Name} ({mem.Reg_No})</p>
-                ))
-                    : ''}
-            </div>
-        </div>
-    )
-};
-
-
 const Team = () => {
 
+    const memberSliderSettings = {
+        arrows: false,
+        dots: false,
+        focusOnSelect: true,
+        slidesToShow: 3,
+        infinite: false,
+        vertical: true,
+        verticalSwiping: true
+    }
+
+    const [memberSliderRef, setMemberSliderRef] = useState(null)
     const [modalDisplay, setModalDisplay] = React.useState(false)
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -85,13 +59,6 @@ const Team = () => {
     useEffect(() => {
         document.getElementById("starrybg").style.background = "linear-gradient(180deg, rgba(23, 23, 23, 0) 6.68%, rgba(52, 80, 154, 0.29) 64.84%, rgba(151, 169, 204, 0.439818) 81.37%, rgba(255, 255, 255, 0.45) 98.87%)";
     }, [])
-
-    const setBookAlignment = e => {
-        console.log(e)
-        // e.data.mode = "landscape";
-        e.object.render.boundsRect.top = 0;
-        e.object.render.boundsRect.left = 0;
-    }
 
     return (
         <div>
@@ -148,49 +115,60 @@ const Team = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center mt-12 md:mt-0">
+                    <div className="text-center mt-12 lg:mt-0">
                         <button
                             onClick={() => setModalDisplay(true)}
-                            className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
+                            className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border lg:border-2 border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
                         >
                             Members List
                         </button>
                     </div>
-                    <div className={'h-screen w-screen bg-transparent z-10 absolute' + (modalDisplay ? " block" : " hidden")}>
-                        <div className='h-full w-full bg-black bg-opacity-80 z-20 fixed top-0'>
-                            <div className="w-full md:w-1/2 relative top-28 mx-auto">
-                                <HTMLFlipBook
-                                    width={340}
-                                    height={500}
-                                    usePortrait={false}
-                                    onInit={(e) => setBookAlignment(e)}
-                                >
-                                    <div className='w-full h-full'>
-                                        <PageCover text="Members List" />
-                                    </div>
-                                    {OBList.map(ob =>
-                                        <div className='w-full h-full'>
-                                            <Page year={ob.Year} members={ob.Members} />
+                    <div className={'h-screen w-screen bg-transparent z-30 absolute' + (modalDisplay ? " block" : " hidden")}>
+                        <div className='relative z-40'>
+                            <button onClick={() => setModalDisplay(false)} className='fixed top-12 right-3 lg:right-32'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-10 lg:w-10 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <button onClick={memberSliderRef?.slickPrev} className='fixed top-1/2 left-3 lg:left-32'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button onClick={memberSliderRef?.slickNext} className='fixed top-1/2 right-3 lg:right-32'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className='h-full w-full bg-black bg-opacity-80 fixed top-0' id="memberCarousel">
+                            <Slider ref={setMemberSliderRef} {...memberSliderSettings} className='mx-12 lg:mx-80 my-10 relative z-30'>
+                                <div className='bg-gray-900 my-2 lg:my-4'>
+                                    <img src={banner} alt="Banner" />
+                                </div>
+                                {OBList.map((ob) => (
+                                    <div className='bg-gray-900 border lg:border-2 border-comsocgreen rounded-xl my-2 lg:my-4 py-4'>
+                                        <h1 className='text-base lg:text-2xl font-semibold text-comsocgreen mb-4'>OB {ob.Year}</h1>
+                                        <div className='grid grid-cols-2'>
+                                            {ob.Members.map(mem => (
+                                                <p className='text-xs lg:text-lg p-1'>{mem.Name} - {mem.Designation}</p>
+                                            ))}
                                         </div>
-                                    )}
-                                    {MembersList.map(mem =>
-                                        <div className='w-full h-full'>
-                                            <MemberPage members={mem.PageList} />
-                                        </div>
-                                    )}
-                                    <div className='w-full h-full'>
-                                        <PageCover text="To be continued..." />
                                     </div>
-                                </HTMLFlipBook>
-                            </div>
-                            <div className='z-20 relative -bottom-44 text-center'>
-                                <button
-                                    onClick={() => setModalDisplay(false)}
-                                    className="bg-gradient-to-r from-color1 to-color2 inline-flex justify-center py-2 px-10 border border-transparent shadow-xl hover:shadow-sm text-xl font-medium mr-auto ml-auto rounded-full text-white hover:from-comsocgreen"
-                                >
-                                    Close List
-                                </button>
-                            </div>
+                                ))}
+                                {MembersList.map((member) => (
+                                    <div className='bg-gray-900 border lg:border-2 border-comsocgreen rounded-xl my-2 lg:my-4 py-4'>
+                                        <h1 className='text-base lg:text-2xl font-semibold text-comsocgreen mb-4'>Members 2021 - 2022</h1>
+                                        <div className='grid grid-cols-3'>
+                                            {member.Members.map(mem => (
+                                                <p className='text-xs lg:text-lg p-1'>{mem.Name}</p>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                                <div className='bg-gray-900 my-2 lg:my-4' />
+                                <div className='bg-gray-900 my-2 lg:my-4' />
+                            </Slider>
                         </div>
                     </div>
                     <Mountains />
