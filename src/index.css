@@ -101,14 +101,6 @@ code {
 
 }
 
-#name,
-#message,
-#subject,
-#email {
-  background-color: rgba(47, 54, 70, 0.616);
-  font-size: 24;
-}
-
 @media only screen and (max-width: 768px) {
   #outlinetext {
     font-size: 60px;
