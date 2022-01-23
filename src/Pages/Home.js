@@ -103,9 +103,9 @@ const Home = () => {
           </div>
           <div className="h-5/6">
             <div className="font-sans text-right mx-4 lg:mx-40 mt-52 text-5xl lg:text-7xl font-black text-white">
-              <div className="md:w-1/3 ml-auto">
+              <div className="inline-block">
                 About Us
-                <div class="h-3 w-20 rounded-md ml-auto bg-gradient-to-r from-color1 to-color2"></div>
+                <div class="h-2 md:h-3 rounded-md bg-gradient-to-r from-color1 to-color2"></div>
               </div>
               <h1 className="font-montserrat font-normal md:font-bold text-2xl lg:text-3xl text-white my-16 lg:my-24 lg:ml-36 lg:leading-custom">
                 IEEE Computer Society VIT Chennai is a zealous community of diverse minds striving to Learn, Create, (sometimes Break!), Develop, and Explore.
@@ -116,9 +116,9 @@ const Home = () => {
           </div>
           <div className="h-4/6">
             <div className="font-sans text-left mx-4 lg:mx-40 pt-8 text-5xl lg:text-7xl font-black text-white">
-              <div className="w-4/5 md:w-1/3">
+              <div className="inline-block">
                 Our Vision
-                <div class="h-3 w-32 rounded-md ml-auto mr-14 bg-gradient-to-r from-color1 to-color2"></div>
+                <div class="h-2 md:h-3 rounded-md bg-gradient-to-r from-color1 to-color2"></div>
               </div>
               <h1 className="font-montserrat font-normal md:font-bold text-2xl lg:text-3xl text-white my-16 lg:my-24 lg:mr-36 lg:leading-custom">
                 We think slightly out of the box, we believe that a club’s resources must not only be channeled into conducting events but also to propagate learning and teaching, symbiotically.
@@ -128,9 +128,9 @@ const Home = () => {
           </div>
           <div className="h-5/6">
             <div className="font-sans text-center mx-4 lg:mx-40 pt-6 lg:pt-10 text-5xl lg:text-7xl font-black text-white">
-              <div className="w-4/5 md:w-1/3 mx-auto">
+              <div className="inline-block">
                 Newsletter
-                <div class="h-3 w-28 mr-8 rounded-md ml-auto bg-gradient-to-r from-color1 to-color2" id="newsletterline"></div>
+                <div class="h-2 md:h-3 rounded-md bg-gradient-to-r from-color1 to-color2"></div>
               </div>
               <div className="text-xl flex justify-center">
                 <p className="font-montserrat font-normal md:font-bold text-2xl lg:text-3xl text-white ml-auto mr-auto mt-12 px-2 lg:px-72 text-center lg:leading-custom">
