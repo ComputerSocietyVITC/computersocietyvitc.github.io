@@ -98,7 +98,7 @@ const MembersList = [
           "Reg_No": "21BLC1538"
         },
         {
-          "Name": "Avadhanam Karthikeya Parthivaram",
+          "Name": "Avadhanam Karthikeya",
           "Reg_No": "20BEC1059"
         },
         {
@@ -256,7 +256,7 @@ const MembersList = [
   {
     "Members":
       [{
-        "Name": "Manoj Kumar Bhargava Panathula",
+        "Name": "Manoj Kumar Bhargava",
         "Reg_No": "21BAI1040"
       },
       {
@@ -473,7 +473,7 @@ const MembersList = [
         "Reg_No": "21BCE1043"
       },
       {
-        "Name": "Venkata Saaketha Krishna Garimella",
+        "Name": "Venkata Saaketha Krishna",
         "Reg_No": "20BEC1253"
       },
       {
