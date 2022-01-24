@@ -60,12 +60,10 @@ code {
   box-shadow: -40px 25px 50px 6px rgb(0 0 0/0.8)
 }
 
-#carousel {
-  max-height: 40rem;
-}
+
 
 .slick-dots {
-  bottom: 40px !important;
+  bottom: 28px !important;
   z-index: 20;
 }
 
@@ -101,6 +99,11 @@ code {
 
 }
 
+#memberslist ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
 @media only screen and (max-width: 768px) {
   #outlinetext {
     font-size: 60px;
@@ -119,10 +122,6 @@ code {
     box-shadow: -10px 5px 50px 1px rgb(0 0 0/0.8)
   }
 
-  .slick-dots {
-    bottom: -65px !important;
-  }
-
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -135,5 +134,9 @@ code {
   #memberCarousel .slick-track,
   #memberCarousel .slick-slider {
     height: 100% !important;
+  }
+
+  .slick-dots {
+    bottom: -70px !important;
   }
 }

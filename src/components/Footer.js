@@ -15,11 +15,11 @@ const Footer = () => {
         <div className='relative z-0'>
             <footer className="bg-gradient-to-b from-bgcolor3 to-black font-montserrat">
                 <div className="pb-6 text-gray-800 flex flex-wrap justify-left text-left">
-                    <div className="pt-8 md:pt-4 w-11/12 mx-auto md:mx-0 md:w-3/12 order-4 md:order-1">
-                        <img src={comsocLogowhite} alt="Comsoc Logo" className='px-6 lg:pl-20' />
-                        <p className='text-white text-xs pt-8 md:pt-12 lg:pl-14 text-center lg:text-right'>©️ Copyright 2022 - IEEE CS VITC. All Rights Reserved.</p>
+                    <div className="pt-8 lg:pt-4 w-11/12 mx-auto lg:mx-0 sm:w-2/3 lg:w-3/12 order-4 lg:order-1">
+                        <img src={comsocLogowhite} alt="IEEE CS VITC Logo" className='px-6 lg:pl-20' />
+                        <p className='text-white text-xs pt-8 lg:pt-12 lg:pl-14 text-center lg:text-right'>©️ Copyright 2022 - IEEE CS VITC. All Rights Reserved.</p>
                     </div>
-                    <div className="mt-3 w-full md:w-3/12 py-6 lg:py-0 pl-28 hidden md:block order-1 md:order-2">
+                    <div className="mt-3 w-full lg:w-3/12 py-6 lg:py-0 pl-28 hidden lg:block order-1 lg:order-2">
                         <div className="text-base text-white mr-56 mb-6">
                             Menu
                             <div id='underlineGradient' />
@@ -43,26 +43,26 @@ const Footer = () => {
                             Contact
                         </a>
                     </div>
-                    <div className="mt-3 w-full md:w-3/12 pl-4 order-2 md:order-3">
-                        <div className="text-lg md:text-base text-white inline-block mb-3">
+                    <div className="mt-3 w-full lg:w-3/12 pl-4 order-2 lg:order-3">
+                        <div className="text-lg lg:text-base text-white inline-block mb-3">
                             Address
                             <div id='underlineGradient' />
                         </div>
-                        <a href="https://goo.gl/maps/C9UE9JLWnBAfQPKe7" target="_blank" className="my-3 block text-white hover:text-gray-200 text-base md:text-sm md:pr-32">
+                        <a href="https://goo.gl/maps/C9UE9JLWnBAfQPKe7" target="_blank" className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm lg:pr-32">
                             Kelambakkam - Vandalur Rd, Rajan Nagar,
                             Chennai, Tamil Nadu 600127
                         </a>
                         <br />
-                        <div className="text-lg md:text-base text-white inline-block mb-3">
+                        <div className="text-lg lg:text-base text-white inline-block mb-3">
                             Email
                             <div id='underlineGradient' />
                         </div>
-                        <a href="mailto:ieeecomputersociety@vit.ac.in" target="_blank" className="my-3 block text-white hover:text-gray-200 text-base md:text-sm">
+                        <a href="mailto:ieeecomputersociety@vit.ac.in" target="_blank" className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm">
                             ieeecomputersociety@vit.ac.in
                         </a>
                     </div>
-                    <div className='mt-3 w-full md:w-3/12 order-3 md:order-4'>
-                        <div className="text-lg md:text-base text-white inline-block my-4 md:my-0 md:mb-10 pl-4 md:pl-0" >
+                    <div className='mt-3 w-full lg:w-3/12 order-3 lg:order-4'>
+                        <div className="text-lg lg:text-base text-white inline-block my-4 lg:my-0 lg:mb-10 pl-4 lg:pl-0" >
                             Social Media
                             <div id='underlineGradient' />
                         </div>

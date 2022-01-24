@@ -45,11 +45,11 @@ const Contact = () => {
                         position="top-right"
                         autoClose={2500}
                     />
-                    <div className="font-catamaran text-center mt-10 mb-2 text-black" id="outlinetext">
+                    <div className="font-catamaran text-center mt-10 mb-6 text-black" id="outlinetext">
                         <h1>CONTACT US</h1>
                     </div>
                     <div className="grid grid-cols-1 lg:mx-auto gap-2">
-                        <div className="mx-5 pb-20 lg:mt-6 font-montserrat lg:w-1/2 lg:mx-auto ">
+                        <div className="mx-5 lg:mt-6 font-montserrat lg:w-1/2 lg:mx-auto ">
                             <div className="sm:ml-28 sm:mr-24  mx-auto align center">
                                 <div className="mt-5 md:mt-0 md:col-span-2 text-left">
                                     <form onSubmit={submitForm} id='contactform'>

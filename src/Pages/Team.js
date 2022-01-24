@@ -21,7 +21,7 @@ const TeamMember = ({ name, designation, profileLink }) => {
     return (
         <div>
             <div className="rounded-full overflow-hidden " id="metallic">
-                <img src={profileLink} className="h-48" alt="Person"></img>
+                <img src={profileLink} className="h-48" alt={name}></img>
             </div>
             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                 <h1 className="font-medium text-xl text-black">{name}</h1>
@@ -109,7 +109,7 @@ const Team = () => {
                             Members List
                         </button>
                     </div>
-                    <div className={'h-screen w-screen bg-transparent z-30 absolute' + (modalDisplay ? " block" : " hidden")}>
+                    <div className={'h-screen w-screen bg-transparent z-30 absolute' + (modalDisplay ? " block" : " hidden")} id="memberslist">
                         <div className='relative z-40'>
                             <button onClick={() => setModalDisplay(false)} className='fixed top-9 right-2 lg:right-52'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-10 lg:w-10 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
