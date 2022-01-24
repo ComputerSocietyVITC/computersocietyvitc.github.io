@@ -39,7 +39,7 @@ export default function Navbar(props) {
               })}
               to="/"
             >
-              <img src={comsoclogo} alt="Comsoc Logo" className="h-16"></img>
+              <img src={comsoclogo} alt="IEEE CS VITC Logo" className="h-16"></img>
             </Link>
             <button
               className="cursor-pointer text-xl leading-none pt-4 block lg:hidden"

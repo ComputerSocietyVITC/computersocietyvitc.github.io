@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import Slider from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import banner from '../images/banner.png'
 
 /* Profile Images */
@@ -25,7 +21,7 @@ const TeamMember = ({ name, designation, profileLink }) => {
     return (
         <div>
             <div className="rounded-full overflow-hidden " id="metallic">
-                <img src={profileLink} className="h-48" alt="Person"></img>
+                <img src={profileLink} className="h-48" alt={name}></img>
             </div>
             <div className='rounded-md p-2 my-4 ' id='designation-bg'>
                 <h1 className="font-medium text-xl text-black">{name}</h1>
@@ -36,16 +32,6 @@ const TeamMember = ({ name, designation, profileLink }) => {
 }
 
 const Team = () => {
-
-    const memberSliderSettings = {
-        arrows: false,
-        dots: false,
-        focusOnSelect: true,
-        slidesToShow: 3,
-        infinite: false,
-        vertical: true,
-        verticalSwiping: true
-    }
 
     const [memberSliderRef, setMemberSliderRef] = useState(null)
     const [modalDisplay, setModalDisplay] = React.useState(false)
@@ -123,26 +109,16 @@ const Team = () => {
                             Members List
                         </button>
                     </div>
-                    <div className={'h-screen w-screen bg-transparent z-30 absolute' + (modalDisplay ? " block" : " hidden")}>
+                    <div className={'h-screen w-screen bg-transparent z-30 absolute' + (modalDisplay ? " block" : " hidden")} id="memberslist">
                         <div className='relative z-40'>
-                            <button onClick={() => setModalDisplay(false)} className='fixed top-12 right-3 lg:right-32'>
+                            <button onClick={() => setModalDisplay(false)} className='fixed top-9 right-2 lg:right-52'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-10 lg:w-10 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </button>
-                            <button onClick={memberSliderRef?.slickPrev} className='fixed top-1/2 left-3 lg:left-32'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button onClick={memberSliderRef?.slickNext} className='fixed top-1/2 right-3 lg:right-32'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
                         </div>
-                        <div className='h-full w-full bg-black bg-opacity-80 fixed top-0' id="memberCarousel">
-                            <Slider ref={setMemberSliderRef} {...memberSliderSettings} className='mx-12 lg:mx-80 my-10 relative z-30'>
+                        <div className='h-full w-full bg-black bg-opacity-80 fixed top-0 overflow-y-scroll' id="memberCarousel">
+                            <div className='mx-10 lg:mx-72 my-10 relative z-30'>
                                 <div className='bg-gray-900 my-2 lg:my-4'>
                                     <img src={banner} alt="Banner" />
                                 </div>
@@ -168,7 +144,7 @@ const Team = () => {
                                 ))}
                                 <div className='bg-gray-900 my-2 lg:my-4' />
                                 <div className='bg-gray-900 my-2 lg:my-4' />
-                            </Slider>
+                            </div>
                         </div>
                     </div>
                     <Mountains />

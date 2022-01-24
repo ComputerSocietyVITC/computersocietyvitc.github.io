@@ -43,29 +43,29 @@ const Events = () => {
                     </div>
                     <div>
                         <div className='relative z-10'>
-                            <button onClick={sliderRef?.slickPrev} className='absolute left-2 md:left-16 top-80'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="md:h-12 md:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <button onClick={sliderRef?.slickPrev} className='absolute left-2 lg:left-16 top-80'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                 </svg>
                             </button>
-                            <button onClick={sliderRef?.slickNext} className='absolute right-2 md:right-16 top-80'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="md:h-12 md:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <button onClick={sliderRef?.slickNext} className='absolute right-2 lg:right-16 top-80'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="lg:h-12 lg:w-12 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </button>
                         </div>
-                        <div id="carousel" className='mb-16'>
-                            <Slider ref={setSliderRef} {...sliderSettings} className='mx-12 md:mx-28'>
+                        <div id="carousel" className='lg:-mb-16 sm:w-5/6 mx-auto lg:w-full'>
+                            <Slider ref={setSliderRef} {...sliderSettings} className='mx-12 lg:mx-28'>
                                 {eventslist.map((event) => (
                                     <div key={event.serial_no}>
-                                        <div className='md:my-6'>
-                                            <div className='grid grid-cols-1 md:grid-cols-2 md:mt-12'>
-                                                <div className='ml-auto md:h-2/3 md:mt-16'>
+                                        <div className='lg:my-6'>
+                                            <div className='grid grid-cols-1 lg:grid-cols-2 lg:mt-12'>
+                                                <div className='ml-auto lg:h-2/3 lg:mt-16'>
                                                     <img src={event.image} alt={event.event} className='w-full h-full' />
                                                 </div>
-                                                <div className='overflow-auto text-lg md:text-2xl font-medium text-justify md:mr-20 p-3 py-6 md:p-16 md:pb-0 bg-bgcolor1' id='carouselcard'>
-                                                    <h1 className='text-4xl md:text-6xl uppercase font-semibold mb-6 md:mb-10'>{event.event}</h1>
-                                                    <span className='text-xl md:text-2xl font-medium text-comsocgreen'>{event.date}</span>
+                                                <div className='overflow-auto text-lg lg:text-2xl font-medium text-justify lg:mr-20 p-3 py-6 lg:p-16 lg:pb-0 bg-bgcolor1' id='carouselcard'>
+                                                    <h1 className='text-4xl lg:text-6xl uppercase font-semibold mb-6 lg:mb-10'>{event.event}</h1>
+                                                    <span className='text-xl lg:text-2xl font-medium text-comsocgreen'>{event.date}</span>
                                                     <br /><br />
                                                     {event.description}
                                                 </div>
