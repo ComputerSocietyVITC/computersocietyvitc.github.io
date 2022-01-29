@@ -8,6 +8,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Loader from "../components/loader/Loader";
 
 const Projects = () => {
+
+    //load images
+    function importAll(r) {
+        let images = {};
+        r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+        return images
+    }
+    const images = importAll(require.context('../components/carousel/images/projects', false, /\.(png|jpe?g|svg|gif)$/));
+
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true)
@@ -62,7 +71,7 @@ const Projects = () => {
                                             <div className='lg:my-6'>
                                                 <div className='grid grid-cols-1 lg:grid-cols-2 lg:mt-12'>
                                                     <div className='ml-auto h-44 w-full lg:h-2/3 lg:mt-24'>
-                                                        <img src={proj.image} alt={proj.project} className='w-full h-full' />
+                                                        <img src={images[proj['image']].default} alt={proj.project} className='w-full h-full' />
                                                     </div>
                                                     <div className='overflow-auto text-lg lg:text-2xl font-medium text-justify lg:mr-20 p-3 py-6 lg:p-10 lg:pb-0 bg-bgcolor1' id='carouselcard'>
                                                         <h1 className='text-3xl lg:text-5xl text-left uppercase font-semibold mb-6 lg:mb-10 text-comsocgreen'>{proj.project}</h1>

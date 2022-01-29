@@ -8,6 +8,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Loader from "../components/loader/Loader";
 
 const Events = () => {
+
+    //load images
+    function importAll(r) {
+        let images = {};
+        r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+        return images
+    }
+    const images = importAll(require.context('../components/carousel/images/events', false, /\.(png|jpe?g|svg|gif)$/));
+
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true)
@@ -61,7 +70,7 @@ const Events = () => {
                                         <div className='lg:my-6'>
                                             <div className='grid grid-cols-1 lg:grid-cols-2 lg:mt-12'>
                                                 <div className='ml-auto lg:h-2/3 lg:mt-16'>
-                                                    <img src={event.image} alt={event.event} className='w-full h-full' />
+                                                    <img src={images[event['image']].default} alt={event.event} className='w-full h-full' />
                                                 </div>
                                                 <div className='overflow-auto text-lg lg:text-2xl font-medium text-justify lg:mr-20 p-3 py-6 lg:p-16 lg:pb-0 bg-bgcolor1' id='carouselcard'>
                                                     <h1 className='text-4xl lg:text-6xl uppercase font-semibold mb-6 lg:mb-10'>{event.event}</h1>
