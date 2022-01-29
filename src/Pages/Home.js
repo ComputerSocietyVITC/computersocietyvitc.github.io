@@ -108,7 +108,7 @@ const Home = () => {
                 <div class="h-2 md:h-3 rounded-md bg-gradient-to-r from-color1 to-color2"></div>
               </div>
               <h1 className="font-montserrat font-normal md:font-bold text-2xl lg:text-3xl text-white my-16 lg:my-24 lg:ml-36 lg:leading-custom">
-                IEEE Computer Society VIT Chennai is a zealous community of diverse minds striving to Learn, Create, (sometimes Break!), Develop, and Explore.
+                IEEE Computer Society VIT Chennai is a zealous community of diverse minds striving to Learn, Create (sometimes Break!), Develop, and Explore.
                 Here we combine an infectious desire to grow together, and a stubborn persistence to keep going, with a healthy ambition for the next audacious challenge.
                 Come join us on this journey!
               </h1>
@@ -121,8 +121,11 @@ const Home = () => {
                 <div class="h-2 md:h-3 rounded-md bg-gradient-to-r from-color1 to-color2"></div>
               </div>
               <h1 className="font-montserrat font-normal md:font-bold text-2xl lg:text-3xl text-white my-16 lg:my-24 lg:mr-36 lg:leading-custom">
-                We think slightly out of the box, we believe that a club’s resources must not only be channeled into conducting events but also to propagate learning and teaching, symbiotically.
-                {/* <br /><br />That said, we conduct two flagship events, namely, HackHub and Paradox, and tons of insightful workshops! */}
+                At IEEE Computer Society VITC, our belief is grounded in the principles of mutual learning and growth.
+                <br />
+                We believe in empowering the community to innovate, develop, create, and to empower itself, which for us is, the greatest Return on Investment for a Technical Society.
+                <br />
+                With a transcendent passion for Tech, and a solemn cognizance of people's struggles, we aspire to solve the great problems of today, and prepare together for a brighter tomorrow.
               </h1>
             </div>
           </div>
