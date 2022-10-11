@@ -17,10 +17,10 @@ export default function Navbar() {
     let pageName = window.location.href.toLowerCase().split("/").slice(-1)[0];
     if (pageName === "") setPageSelected({ ...pageSelected, home: true });
     else setPageSelected({ ...pageSelected, [pageName]: true });
-  }, []);
+  }, [pageSelected]);
   React.useEffect(() => {
     if (navbarOpen) setNavbarOpen(!navbarOpen);
-  }, [pageSelected]);
+  }, [navbarOpen]);
 
   let pageSelectedStyle = {
     borderBottom: "2.2px solid #29DB9B",

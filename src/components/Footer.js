@@ -73,7 +73,8 @@ const Footer = () => {
             </div>
             <a
               href="https://goo.gl/maps/C9UE9JLWnBAfQPKe7"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm lg:pr-32"
             >
               Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu 600127
@@ -86,6 +87,7 @@ const Footer = () => {
             <a
               href="mailto:ieeecomputersociety@vit.ac.in"
               target="_blank"
+              rel="noreferrer"
               className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm"
             >
               ieeecomputersociety@vit.ac.in
@@ -101,6 +103,7 @@ const Footer = () => {
                 <a
                   href="https://www.instagram.com/comsoc.vitcc/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src={instagram}
@@ -110,7 +113,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href="https://discord.gg/6vkY3kcZnE" target="_blank">
+                <a
+                  href="https://discord.gg/6vkY3kcZnE"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     src={discord}
                     alt="Discord"
@@ -122,6 +129,7 @@ const Footer = () => {
                 <a
                   href="https://github.com/ComputerSocietyVITC"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src={github}
@@ -134,6 +142,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src={linkedin}
@@ -146,6 +155,7 @@ const Footer = () => {
                 <a
                   href="https://www.youtube.com/channel/UCOgwDinZGau4rwv3swAe-nQ"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src={youtube}
@@ -155,7 +165,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href="https://t.me/IEEE_CS_VIT_Chennai" target="_blank">
+                <a
+                  href="https://t.me/IEEE_CS_VIT_Chennai"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     src={telegram}
                     alt="telegram"
@@ -164,7 +178,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href="https://twitter.com/ieeecsvitc" target="_blank">
+                <a
+                  href="https://twitter.com/ieeecsvitc"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     src={twitter}
                     alt="twitter"
@@ -173,7 +191,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
-                <a href="https://dev.to/ieeecsvitc" target="_blank">
+                <a
+                  href="https://dev.to/ieeecsvitc"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     src={devto}
                     alt="devto"
