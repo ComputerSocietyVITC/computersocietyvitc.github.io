@@ -20,7 +20,7 @@ export default function Navbar() {
   }, [pageSelected]);
   React.useEffect(() => {
     if (navbarOpen) setNavbarOpen(!navbarOpen);
-  }, [navbarOpen]);
+  }, [navbarOpen])
 
   let pageSelectedStyle = {
     borderBottom: "2.2px solid #29DB9B",
