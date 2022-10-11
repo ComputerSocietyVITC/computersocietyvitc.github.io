@@ -4,27 +4,26 @@ import "./stars.sass";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 // Import Components
-import Navbar from './components/Navbar.js'
-import Footer from './components/Footer.js'
+import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 
 // Import Pages
-import Home from './Pages/Home.js'
-import Events from './Pages/Events.js'
-import Projects from './Pages/Projects.js'
-import Team from './Pages/Team.js'
-import Blogs from './Pages/Blogs.js'
-import Contact from './Pages/Contact.js'
-import Error from './Pages/Error.js'
+import Home from "./Pages/Home.js";
+import Events from "./Pages/Events.js";
+import Projects from "./Pages/Projects.js";
+import Team from "./Pages/Team.js";
+import Blogs from "./Pages/Blogs.js";
+import Contact from "./Pages/Contact.js";
+import Error from "./Pages/Error.js";
 
 function App() {
-
   const RouteWithNavBarFooter = ({ children }) => (
     <Route>
       <Navbar />
       {children}
       <Footer />
     </Route>
-  )
+  );
 
   return (
     <div className="App">

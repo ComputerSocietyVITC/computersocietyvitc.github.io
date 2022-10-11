@@ -1,137 +1,139 @@
 const OBList = [
   {
-    "Year": "2018 - 2019",
-    "Members":
-      [{
-        "Name": "Krishnakumar M",
-        "Designation": "President",
-        "special": "Co-Founders"
+    Year: "2018 - 2019",
+    Members: [
+      {
+        Name: "Krishnakumar M",
+        Designation: "President",
+        special: "Co-Founders",
       },
       {
-        "Name": "Aylmer Britto R",
-        "Designation": "Projects Head",
-        "special": "Co-Founders"
+        Name: "Aylmer Britto R",
+        Designation: "Projects Head",
+        special: "Co-Founders",
       },
       {
-        "Name": "Adithya Narayan",
-        "Designation": "General Secretary",
-        "special": "Co-Founders"
+        Name: "Adithya Narayan",
+        Designation: "General Secretary",
+        special: "Co-Founders",
       },
       {
-        "Name": "Nikhilesh Prabhakar",
-        "Designation": "Vice President",
-        "special": ""
+        Name: "Nikhilesh Prabhakar",
+        Designation: "Vice President",
+        special: "",
       },
       {
-        "Name": "Srinidhi M",
-        "Designation": "Treasurer",
-        "special": ""
+        Name: "Srinidhi M",
+        Designation: "Treasurer",
+        special: "",
       },
       {
-        "Name": "Thrivikram",
-        "Designation": "Joint General Secretary",
-        "special": ""
-      }]
-  }
-  ,
-  {
-    "Year": "2019 - 2020",
-    "Members":
-      [{
-        "Name": "Abhishek Satapathy",
-        "Designation": "President",
-        "special": ""
+        Name: "Thrivikram",
+        Designation: "Joint General Secretary",
+        special: "",
       },
-      {
-        "Name": "Nikhil John",
-        "Designation": "Vice President",
-        "special": ""
-      },
-      {
-        "Name": "Shreyansh Saha",
-        "Designation": "Projects Head",
-        "special": ""
-      },
-      {
-        "Name": "G l Vikram",
-        "Designation": "General Secretary",
-        "special": ""
-      },
-      {
-        "Name": "Zoheb Mamoo ",
-        "Designation": "Creative Co-Head",
-        "special": ""
-      },
-      {
-        "Name": "Kaaviya R  ",
-        "Designation": "Creative & PR Head",
-        "special": ""
-      },
-      {
-        "Name": "Vidya G  ",
-        "Designation": "Treasurer",
-        "special": ""
-      },
-      {
-        "Name": "Ananya Sajwan",
-        "Designation": "PR Co-Head",
-        "special": ""
-      },
-      {
-        "Name": "Vedanta Trivedi",
-        "Designation": "Joint General Secretary",
-        "special": ""
-      }]
+    ],
   },
   {
-    "Year": "2020 - 2021",
-    "Members":
-      [{
-        "Name": "Niket Paresh Ganatra  ",
-        "Designation": "President",
-        "special": ""
+    Year: "2019 - 2020",
+    Members: [
+      {
+        Name: "Abhishek Satapathy",
+        Designation: "President",
+        special: "",
       },
       {
-        "Name": "Mansi Parashar",
-        "Designation": "Vice President",
-        "special": ""
+        Name: "Nikhil John",
+        Designation: "Vice President",
+        special: "",
       },
       {
-        "Name": "Vedanta Trivedi",
-        "Designation": "General Secretary",
-        "special": ""
+        Name: "Shreyansh Saha",
+        Designation: "Projects Head",
+        special: "",
       },
       {
-        "Name": "Mainak Sengupta",
-        "Designation": "Joint General Secretary",
-        "special": ""
+        Name: "G l Vikram",
+        Designation: "General Secretary",
+        special: "",
       },
       {
-        "Name": "Harsh Sankar Naicker",
-        "Designation": "Projects Head",
-        "special": ""
+        Name: "Zoheb Mamoo ",
+        Designation: "Creative Co-Head",
+        special: "",
       },
       {
-        "Name": "Abhishek Kumkar",
-        "Designation": "Technical Head",
-        "special": ""
+        Name: "Kaaviya R  ",
+        Designation: "Creative & PR Head",
+        special: "",
       },
       {
-        "Name": "JS Abhishek",
-        "Designation": "Operations head",
-        "special": ""
+        Name: "Vidya G  ",
+        Designation: "Treasurer",
+        special: "",
       },
       {
-        "Name": "Ananya Sajwan",
-        "Designation": " Treasurer",
-        "special": ""
+        Name: "Ananya Sajwan",
+        Designation: "PR Co-Head",
+        special: "",
       },
       {
-        "Name": "Zoheb Mamoo",
-        "Designation": "Creative Head",
-        "special": ""
-      }]
-  }
+        Name: "Vedanta Trivedi",
+        Designation: "Joint General Secretary",
+        special: "",
+      },
+    ],
+  },
+  {
+    Year: "2020 - 2021",
+    Members: [
+      {
+        Name: "Niket Paresh Ganatra  ",
+        Designation: "President",
+        special: "",
+      },
+      {
+        Name: "Mansi Parashar",
+        Designation: "Vice President",
+        special: "",
+      },
+      {
+        Name: "Vedanta Trivedi",
+        Designation: "General Secretary",
+        special: "",
+      },
+      {
+        Name: "Mainak Sengupta",
+        Designation: "Joint General Secretary",
+        special: "",
+      },
+      {
+        Name: "Harsh Sankar Naicker",
+        Designation: "Projects Head",
+        special: "",
+      },
+      {
+        Name: "Abhishek Kumkar",
+        Designation: "Technical Head",
+        special: "",
+      },
+      {
+        Name: "JS Abhishek",
+        Designation: "Operations head",
+        special: "",
+      },
+      {
+        Name: "Ananya Sajwan",
+        Designation: " Treasurer",
+        special: "",
+      },
+      {
+        Name: "Zoheb Mamoo",
+        Designation: "Creative Head",
+        special: "",
+      },
+    ],
+  },
   // ,
   //   {
   //     "Name": "Samank Gupta",
@@ -181,6 +183,6 @@ const OBList = [
   //     "Designation": "Design Co-Head",
   //     "special": ""
   //   }
-]
+];
 
 export default OBList;
