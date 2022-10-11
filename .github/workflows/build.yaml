@@ -17,10 +17,11 @@ jobs:
       - name: Use Node.js 16
         run: |
             npm i 
-            npm run dev
+            npm run build
             git config user.name github-actions
             git config user.email github-actions@github.com
-            git add .
-            git commit -m "[actions]: update Readme"
+            git checkout -B gh-pages
+            git add build
+            git commit -m "Build by Abhijith Ganesh🚀🚀🚀"
             git push
 
