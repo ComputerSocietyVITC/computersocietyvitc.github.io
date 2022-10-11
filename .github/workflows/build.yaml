@@ -1,4 +1,4 @@
-name: build
+name: Upload
 run-name: Create React App build.
 on:
   push:
@@ -13,7 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.0
+        with:
+          node-version: 16
       - name: Use Node.js 16
         run: |
             npm i 
@@ -24,4 +27,9 @@ jobs:
             git add build
             git commit -m "Build by Abhijith Ganesh🚀🚀🚀"
             git push
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: directory
+          path: ./build
 
