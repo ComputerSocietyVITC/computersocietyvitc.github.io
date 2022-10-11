@@ -1,12 +1,15 @@
-name: Build Process
+name: build
 run-name: Create React App build.
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - "*"
 
 jobs:
-  add-contributors:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
