@@ -3,7 +3,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,14 +32,11 @@ jobs:
         run: |
             npm i 
             npm run build
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git checkout -B gh-pages
-            git add build
-            git commit -m "Build by Abhijith Ganesh🚀🚀🚀"
-            git push              
+                     
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build
 
   # Deployment job
   deploy:
