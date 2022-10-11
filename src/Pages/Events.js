@@ -44,7 +44,7 @@ const Events = () => {
     infinite: true,
     customPaging: function (i) {
       return (
-        <a>
+        <a href>
           <div className="h-3 w-3 rounded-lg bg-white"></div>
         </a>
       );

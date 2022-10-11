@@ -29,10 +29,14 @@ const Contact = () => {
     const { data, error } = await supabase
       .from("Contact")
       .insert([contactData]);
-    if (data) {
-      toast.success("Message Submitted!", {
-        theme: "dark",
-      });
+    if (error) {
+      console.log(error);
+    } else {
+      if (data) {
+        toast.success("Message Submitted!", {
+          theme: "dark",
+        });
+      }
     }
   };
 

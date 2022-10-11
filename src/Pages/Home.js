@@ -52,10 +52,14 @@ const Home = () => {
     const { data, error } = await supabase
       .from("Newsletter")
       .insert([{ email: email }]);
-    if (data) {
-      toast.success("Email ID Submitted!", {
-        theme: "dark",
-      });
+    if (error) {
+      console.err(error);
+    } else {
+      if (data) {
+        toast.success("Email ID Submitted!", {
+          theme: "dark",
+        });
+      }
     }
   };
 

@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
             <a
               href="https://goo.gl/maps/C9UE9JLWnBAfQPKe7"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm lg:pr-32"
             >
               Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu 600127

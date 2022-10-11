@@ -32,7 +32,6 @@ const TeamMember = ({ name, designation, profileLink }) => {
 };
 
 const Team = () => {
-  const [memberSliderRef, setMemberSliderRef] = useState(null);
   const [modalDisplay, setModalDisplay] = React.useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {

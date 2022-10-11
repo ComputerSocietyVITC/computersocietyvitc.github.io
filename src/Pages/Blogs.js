@@ -5,7 +5,7 @@ import Mountains from "../components/Mountains";
 const Article = (props) => {
   const { author, date, title, url, img } = props;
   return (
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noreferrer">
       <div className="bg-white rounded-3xl ">
         <div className="rounded-t-3xl overflow-hidden">
           <img class="object-contain" src={img} alt={title} />
