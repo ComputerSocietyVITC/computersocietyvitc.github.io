@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import Loader from "../components/loader/Loader";
 
 const Projects = () => {
-  //load images
   function importAll(r) {
     let images = {};
     r.keys().forEach((item, index) => {
