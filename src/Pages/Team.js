@@ -127,8 +127,8 @@ const Team = () => {
               </section>
               <section className="grid justify-items-center">
                 <TeamMember
-                  name="Gunja Pandey"
-                  designation="Public Relations head"
+                  name="Saimirra Ramesh"
+                  designation="Social media head"
                   profileLink={saimirra}
                 />
               </section>
