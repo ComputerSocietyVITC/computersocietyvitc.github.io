@@ -1,4 +1,5 @@
 import NavBar from "@ieeecs/components/navbar";
+import "../app/globals.css"
 import "../../fonts/fonts.css";
 
 export default function Home() {
