@@ -6,17 +6,24 @@ let config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screen: {
+        sm: {
+          max: "767px",
+        },
+        md: {
+          min: "768px",
+          max: "959px",
+        },
+        lg: {
+          min: "960px",
+        },
       },
       fontFamily: {
         space: "Space Grotesk, sans-serif",
       },
       colors: {
-        "blacky":"#1a1a1a",
-      }
+        blacky: "#1a1a1a",
+      },
     },
   },
   plugins: [],

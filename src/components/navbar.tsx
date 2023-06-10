@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 let NavBarItem = (props: { name: string; flag: boolean }): JSX.Element => {
   return (
     <section
-      className={`text-xl font-space font-bold px-4 h-full flex justify-between items-center dark:border-0 dark:border-r-4 dark:border-r-blacky ${
+      className={`hidden text-xl font-space font-bold px-4 h-full lg:flex justify-between items-center dark:border-0 dark:border-r-4 dark:border-r-blacky ${
         props.flag ? "dark:bg-black dark:text-slate-50 text-blacky bg-slate-50 border" : ""
       }`}
     >
@@ -33,7 +33,7 @@ let NavBar = (): JSX.Element => {
     <>
       <section className="h-16 flex justify-between">
         <img src="./logo.png" alt="logo" className="h-16 my-4 pl-16" />
-        <section className="dark:text-blacky dark:bg-slate-50 text-slate-50 bg-blacky flex items-center h-12 rounded-l">
+        <section className="dark:text-blacky dark:bg-slate-50 text-slate-50 bg-blacky sm:hidden lg:flex items-center h-12 rounded-l-md">
           <NavBarItem name="Home" flag={HomeFlag} />
           <NavBarItem name="Team" flag={TeamFlag} />
           <NavBarItem name="Project" flag={ProjectFlag} />
