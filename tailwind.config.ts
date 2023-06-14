@@ -20,9 +20,11 @@ let config = {
       },
       fontFamily: {
         space: "Space Grotesk, sans-serif",
+        offbit: "Offbit, sans-serif",
       },
       colors: {
         blacky: "#1a1a1a",
+        brandColor: "#16C79E",
       },
     },
   },

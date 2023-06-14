@@ -33,7 +33,7 @@ let NavBar = (): JSX.Element => {
     <>
       <section className="h-16 flex justify-between">
         <img src="./logo.png" alt="logo" className="h-16 my-4 pl-16" />
-        <section className="dark:text-blacky dark:bg-slate-50 text-slate-50 bg-blacky sm:hidden lg:flex items-center h-12 rounded-l-md">
+        <section className="dark:text-blacky dark:bg-slate-50 text-slate-50 bg-blacky sm:hidden lg:flex items-center h-12">
           <NavBarItem name="Home" flag={HomeFlag} />
           <NavBarItem name="Team" flag={TeamFlag} />
           <NavBarItem name="Project" flag={ProjectFlag} />

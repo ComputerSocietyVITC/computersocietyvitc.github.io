@@ -2,3 +2,8 @@
   font-family: "Space Grotesk";
   src: url("SpaceGrotesk-VariableFont_wght.ttf");
 }
+
+@font-face {
+  font-family: "OffBit";
+  src: url("OffBit/OffBitTrial-DotBold.ttf");
+}
