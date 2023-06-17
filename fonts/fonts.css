@@ -2,3 +2,23 @@
   font-family: "Space Grotesk";
   src: url("SpaceGrotesk-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "PT-Sans Bold";
+  src: url("PTSans-Bold.ttf");
+}
+@font-face {
+  font-family: "PT-Sans BoldItalic";
+  src: url("PTSans-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "PT-Sans Regular";
+  src: url("PTSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Monsterrat Regular";
+  src: url("Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-VariableFont_wght.ttf");
+}

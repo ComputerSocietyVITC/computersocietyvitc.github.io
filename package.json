@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start":"next dev",
+    "start": "next dev",
     "dev": "turbo start",
     "build": "next build",
     "lint": "next lint"
@@ -17,6 +17,7 @@
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   }

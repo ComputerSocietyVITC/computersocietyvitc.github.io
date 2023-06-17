@@ -1,6 +1,7 @@
 import NavBar from "@ieeecs/components/navbar";
-import "../app/globals.css"
+import "../app/globals.css";
 import "../../fonts/fonts.css";
+import Footer from "@ieeecs/components/footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           "You don't know the power of the dark side!" - Darth Vader
         </section>
       </main>
+      <Footer />
     </section>
   );
 }

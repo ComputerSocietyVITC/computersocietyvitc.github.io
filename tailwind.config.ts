@@ -20,6 +20,11 @@ let config = {
       },
       fontFamily: {
         space: "Space Grotesk, sans-serif",
+        ptsansb: "PT-Sans Bold, sans-serif",
+        ptsansbi: "PT-Sans BoldItalic, sans-serif",
+        ptsansr: "PT-Sans Regular, sans-serif",
+        monsterrat: "Monsterrat Regular, sans-serif",
+        raleway: "Raleway, sans-serif",
       },
       colors: {
         blacky: "#1a1a1a",
